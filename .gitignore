@@ -1,0 +1,22 @@
+# Secrets
+.env
+
+# Videos and uploads
+*.mp4
+*.mov
+*.webm
+*.mkv
+uploads/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node
+node_modules/
+
+# Local database
+*.db
+*.sqlite
