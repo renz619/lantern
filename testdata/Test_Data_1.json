@@ -13,7 +13,7 @@
             "description": "multicolored keys with a UT orange decoration and a car key sticking out to the left",
             "anchor": "desk",
             "position": "on the desk, between the monitors",
-            "video_seconds": 8.0
+            "video_seconds": 8.5
         },
         {
             "label": "water bottle",
@@ -31,7 +31,7 @@
         },
         {
             "label": "airpods",
-            "description": "airpods",
+            "description": "airpods in a black case",
             "anchor": "desk",
             "position": "on top of the PC",
             "video_seconds": 14.0
@@ -59,7 +59,7 @@
         },
         {
             "label": "pencil",
-            "description": "pencil",
+            "description": "mechanical pencil",
             "anchor": "desk",
             "position": "on the desk",
             "video_seconds": 22.0
