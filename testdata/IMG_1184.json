@@ -1,0 +1,103 @@
+{
+    "video": "IMG_1184.mov",
+    "items": [
+        {
+            "label": "wallet",
+            "description": "white Bank of America wallet",
+            "anchor": "desk",
+            "position": "on the desk, in front of the keyboard",
+            "video_seconds": 6.0
+        },
+        {
+            "label": "keys",
+            "description": "multicolored keys with a UT orange decoration and a car key sticking out to the left",
+            "anchor": "desk",
+            "position": "on the desk, between the monitors",
+            "video_seconds": 8.0
+        },
+        {
+            "label": "water bottle",
+            "description": "black Owala water bottle",
+            "anchor": "desk",
+            "position": "on the desk, between the monitors",
+            "video_seconds": 9.0
+        },
+        {
+            "label": "phone",
+            "description": "phone lying face up",
+            "anchor": "desk",
+            "position": "on the desk, in front of the keyboard",
+            "video_seconds": 10.0
+        },
+        {
+            "label": "airpods",
+            "description": "airpods",
+            "anchor": "desk",
+            "position": "on top of the PC",
+            "video_seconds": 14.0
+        },
+        {
+            "label": "backpack",
+            "description": "backpack",
+            "anchor": "chair",
+            "position": "on the chair",
+            "video_seconds": 15.0
+        },
+        {
+            "label": "water bottle",
+            "description": "black bottle with a big swinging handle",
+            "anchor": "desk",
+            "position": "on top of the PC",
+            "video_seconds": 21.0
+        },
+        {
+            "label": "charger",
+            "description": "charger",
+            "anchor": "desk",
+            "position": "plugged into the PC",
+            "video_seconds": 21.0
+        },
+        {
+            "label": "pencil",
+            "description": "pencil",
+            "anchor": "desk",
+            "position": "on the desk",
+            "video_seconds": 22.0
+        },
+        {
+            "label": "wallet",
+            "description": "larger brown wallet",
+            "anchor": "desk",
+            "position": "on the desk, in front of the monitor",
+            "video_seconds": 26.0
+        },
+        {
+            "label": "keys",
+            "description": "blue key chain with a small room key",
+            "anchor": "desk",
+            "position": "on the desk, in front of the monitor",
+            "video_seconds": 27.0
+        },
+        {
+            "label": "phone",
+            "description": "phone in a grey case, lying face down",
+            "anchor": "desk",
+            "position": "on the desk, in front of the PC and monitor",
+            "video_seconds": 27.0
+        },
+        {
+            "label": "bag",
+            "description": "bag",
+            "anchor": "desk",
+            "position": "on the desk, in front of the monitor",
+            "video_seconds": 27.0
+        },
+        {
+            "label": "water bottle",
+            "description": "black Owala bottle with a grey and white lid",
+            "anchor": "desk",
+            "position": "on the desk, in front of the PC",
+            "video_seconds": 28.0
+        }
+    ]
+}
