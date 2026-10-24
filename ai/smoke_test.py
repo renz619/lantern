@@ -24,14 +24,18 @@ def main(path):
         sys.exit("Set GEMINI_API_KEY in .env first")
 
     client = genai.Client()
+    print("Uploading...", flush=True)
     video = client.files.upload(file=path)
+    print(f"Uploaded, state={video.state.name}", flush=True)
     while video.state.name == "PROCESSING":
         time.sleep(5)
         video = client.files.get(name=video.name)
+        print(f"state={video.state.name}", flush=True)
     if video.state.name != "ACTIVE":
         sys.exit(f"Video processing failed: {video.state.name}")
 
     try:
+        print(f"Asking {MODEL}...", flush=True)
         response = client.models.generate_content(model=MODEL, contents=[video, PROMPT])
         print(response.text)
     finally:
