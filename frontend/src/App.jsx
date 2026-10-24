@@ -1,5 +1,22 @@
+import { useState } from 'react'
+import BottomNav from './components/BottomNav'
+import ScanPage from './pages/ScanPage'
+import SearchPage from './pages/SearchPage'
+import HistoryPage from './pages/HistoryPage'
+
 function App() {
-  return <h1>Room Object Tracker</h1>
+  const [tab, setTab] = useState('scan')
+
+  return (
+    <>
+      <main className="app">
+        {tab === 'scan' && <ScanPage goTo={setTab} />}
+        {tab === 'search' && <SearchPage goTo={setTab} />}
+        {tab === 'history' && <HistoryPage goTo={setTab} />}
+      </main>
+      <BottomNav tab={tab} setTab={setTab} />
+    </>
+  )
 }
 
 export default App
