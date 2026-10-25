@@ -6,5 +6,7 @@ services:
     plan: free
     healthCheckPath: /health
     envVars:
+      - key: LANTERN_ANALYZER
+        value: gemini # use "mock" for fake items without calling Gemini
       - key: GEMINI_API_KEY
         sync: false # paste it in the Render dashboard; never commit it
