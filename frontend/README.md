@@ -1,3 +1,18 @@
+# Lantern frontend
+
+Run it from this folder:
+
+```
+cd frontend
+cp .env.example .env.local   # mock data on; edit and restart to use B's server
+npm install
+npm run dev
+```
+
+Open http://localhost:5173. With `VITE_USE_MOCKS=true` (the default in `.env.example`) the app uses fake data. Adding `?mock=1` to the address forces fake data too, which is the demo fallback if the server is down. Set `VITE_USE_MOCKS=false` and `VITE_API_URL` to use the real server. Restart `npm run dev` after editing `.env.local`.
+
+---
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
