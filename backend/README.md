@@ -69,6 +69,26 @@ can be tested together before the database and Gemini integration exist:
 The mock upload is not written to disk and is not sent to Gemini. Those behaviors
 belong to later checkpoints.
 
+## SQLite storage checkpoint
+
+`app/database.py` defines the real local storage layer. SQLite is a database kept
+in one file, so it does not need a separate database server.
+
+The database has two tables:
+
+- `scans` stores when each scan started, its status, video path, and any error.
+- `sightings` stores every detected item and links it to the scan that found it.
+
+The default database path is `backend/lantern.sqlite`. Override it when needed:
+
+```bash
+export LANTERN_DB_PATH="/path/to/another.sqlite"
+```
+
+Database files are ignored by Git. Tests use temporary databases and never touch
+the default file. The API routes still use mock data in this checkpoint; later
+work will connect these tested database operations to uploads and analysis.
+
 ## Frontend access (CORS)
 
 CORS is the browser permission policy that controls which website addresses may
@@ -93,4 +113,4 @@ From `backend/`, with the virtual environment active:
 python -m pytest -q
 ```
 
-A successful run currently ends with `10 passed`.
+A successful run currently ends with `16 passed`.
