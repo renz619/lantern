@@ -1,0 +1,82 @@
+[
+  {
+    "label": "water bottle",
+    "description": "tall black reusable water bottle",
+    "anchor": "desk",
+    "position": "on the desk under the loft bed, next to a red gift bag",
+    "confidence": 0.95,
+    "video_seconds": 8.0
+  },
+  {
+    "label": "notebook",
+    "description": "yellow notebook with a blue label on the cover",
+    "anchor": "floor",
+    "position": "on the grey shag rug in front of the TV stand",
+    "confidence": 0.9,
+    "video_seconds": 16.0
+  },
+  {
+    "label": "wallet",
+    "description": "black leather bifold wallet",
+    "anchor": "couch",
+    "position": "on the grey couch next to the keys",
+    "confidence": 0.98,
+    "video_seconds": 20.0
+  },
+  {
+    "label": "keys",
+    "description": "set of keys with keychain accessories and an orange tag",
+    "anchor": "couch",
+    "position": "on the grey couch next to the wallet and AirPods case",
+    "confidence": 0.98,
+    "video_seconds": 20.5
+  },
+  {
+    "label": "airpods",
+    "description": "white AirPods charging case",
+    "anchor": "couch",
+    "position": "on the grey couch next to the keys",
+    "confidence": 0.95,
+    "video_seconds": 21.0
+  },
+  {
+    "label": "water bottle",
+    "description": "tall orange water bottle with a black lid",
+    "anchor": "table",
+    "position": "on the small round black stool next to the mini fridge",
+    "confidence": 0.95,
+    "video_seconds": 22.0
+  },
+  {
+    "label": "bag",
+    "description": "white and blue duffel bag",
+    "anchor": "floor",
+    "position": "on the floor between the small stool and the storage bench",
+    "confidence": 0.9,
+    "video_seconds": 23.0
+  },
+  {
+    "label": "glasses",
+    "description": "pair of dark-frame eyeglasses",
+    "anchor": "bench",
+    "position": "on top of the grey storage bench under the window, next to a black jacket",
+    "confidence": 0.9,
+    "video_seconds": 24.0
+  },
+  {
+    "label": "umbrella",
+    "description": "black compact folding umbrella",
+    "anchor": "chair",
+    "position": "on the wooden chair seat",
+    "confidence": 0.98,
+    "video_seconds": 26.5
+  },
+  {
+    "label": "backpack",
+    "description": "backpack",
+    "anchor": "floor",
+    "position": "on the floor leaning against the loft bed frame",
+    "confidence": 0.98,
+    "video_seconds": 31.0
+  }
+]

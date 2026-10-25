@@ -9,12 +9,14 @@ import re
 import time
 from pathlib import Path
 
+import httpx
 from dotenv import load_dotenv
 from pydantic import BaseModel
 
 MODEL = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
 PROMPT_FILE = Path(__file__).parent / "prompts" / f"{os.getenv('PROMPT_VERSION', 'analyze_v2')}.txt"
 CONFIDENCE_CUTOFF = 0.5
+REQUEST_TIMEOUT_MS = 240_000  # give up on a Gemini request that hangs after 4 minutes
 
 # The vocabulary lives in vocabulary.json so adding an object is a one-line data
 # edit: "labels" are the items we track, "aliases" map other names to one standard
@@ -105,7 +107,7 @@ def generate_with_retry(client, contents, config, attempts=4):
     for attempt in range(attempts):
         try:
             return client.models.generate_content(model=MODEL, contents=contents, config=config)
-        except errors.ServerError:
+        except (errors.ServerError, httpx.TimeoutException):
             if attempt == attempts - 1:
                 raise
             time.sleep(10 * (attempt + 1))
@@ -115,7 +117,7 @@ def call_gemini(path, prompt):
     from google import genai
     from google.genai import types
 
-    client = genai.Client()
+    client = genai.Client(http_options=types.HttpOptions(timeout=REQUEST_TIMEOUT_MS))
     video = client.files.upload(file=str(path))
     try:
         while video.state.name == "PROCESSING":

@@ -39,9 +39,9 @@
         {
             "label": "umbrella",
             "description": "black and blue pattern umbrella with brown wooden handle",
-            "anchor": "floor",
-            "position": "on the grey shag rug in front of the TV stand",
-            "video_seconds": 16.5
+            "anchor": "tv stand",
+            "position": "on the grey shag rug on the TV stand",
+            "video_seconds": 17.0
         },
         {
             "label": "backpack",
@@ -88,8 +88,15 @@
         {
             "label": "bag",
             "description": "cream canvas duffel or tote bag with blue trim",
+            "anchor": "stool",
+            "position": "resting on the black stool by the mini fridge",
+            "video_seconds": 23.0
+        },
+        {
+            "label": "bag",
+            "description": "cream canvas duffel or tote bag with blue trim",
             "anchor": "floor",
-            "position": "resting on and near a black stool by the mini fridge",
+            "position": "resting on the floor and near a black stool by the mini fridge",
             "video_seconds": 23.0
         },
         {
@@ -115,17 +122,17 @@
         },
         {
             "label": "notebook",
-            "description": "yellow notebook or folder",
+            "description": "yellow notebook",
             "anchor": "desk",
             "position": "on the desk surface under the bunk bed",
             "video_seconds": 27.0
         },
         {
-            "label": "pen",
-            "description": "black pen",
+            "label": "bag",
+            "description": "red gift bag with 'Snag' printed in white",
             "anchor": "desk",
-            "position": "on the yellow notebook on top of desk surface under the bunk bed",
-            "video_seconds": 27.0
+            "position": "on the desk surface under the bunk bed",
+            "video_seconds": 30.0
         }
     ]
 }

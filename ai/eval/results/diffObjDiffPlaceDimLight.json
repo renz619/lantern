@@ -1,0 +1,130 @@
+[
+  {
+    "label": "charger",
+    "description": "white charging cable plugged into power strip",
+    "anchor": "floor",
+    "position": "on the floor under the desk, connected near the power strip",
+    "confidence": 0.85,
+    "video_seconds": 9.5
+  },
+  {
+    "label": "tablet",
+    "description": "flat dark tablet or closed slim device",
+    "anchor": "desk",
+    "position": "on the desk, in front of the keyboard and water bottle",
+    "confidence": 0.8,
+    "video_seconds": 10.0
+  },
+  {
+    "label": "water bottle",
+    "description": "tall black reusable water bottle",
+    "anchor": "desk",
+    "position": "on the desk, next to a red bag",
+    "confidence": 0.95,
+    "video_seconds": 10.5
+  },
+  {
+    "label": "bag",
+    "description": "red Snag paper shopping bag",
+    "anchor": "desk",
+    "position": "on the desk, behind the black water bottle",
+    "confidence": 0.95,
+    "video_seconds": 11.0
+  },
+  {
+    "label": "hat",
+    "description": "olive green baseball cap",
+    "anchor": "tv stand",
+    "position": "hanging on the upper left corner of the television",
+    "confidence": 0.95,
+    "video_seconds": 17.5
+  },
+  {
+    "label": "laptop",
+    "description": "silver laptop closed flat",
+    "anchor": "floor",
+    "position": "on the grey rug in front of the TV stand",
+    "confidence": 0.85,
+    "video_seconds": 18.0
+  },
+  {
+    "label": "backpack",
+    "description": "black backpack standing upright",
+    "anchor": "tv stand",
+    "position": "on the floor leaning against the right side of the TV stand",
+    "confidence": 0.95,
+    "video_seconds": 19.5
+  },
+  {
+    "label": "remote",
+    "description": "black remote control with purple directional buttons",
+    "anchor": "couch",
+    "position": "on the couch cushion",
+    "confidence": 0.95,
+    "video_seconds": 22.0
+  },
+  {
+    "label": "remote",
+    "description": "second black remote control with purple buttons",
+    "anchor": "couch",
+    "position": "on the couch cushion beside the other remote",
+    "confidence": 0.95,
+    "video_seconds": 22.0
+  },
+  {
+    "label": "water bottle",
+    "description": "orange and black water bottle",
+    "anchor": "couch",
+    "position": "on the couch next to the remotes",
+    "confidence": 0.95,
+    "video_seconds": 23.0
+  },
+  {
+    "label": "bag",
+    "description": "white and blue shopping tote bag",
+    "anchor": "floor",
+    "position": "on the floor between the couch and mini fridge",
+    "confidence": 0.9,
+    "video_seconds": 24.5
+  },
+  {
+    "label": "bag",
+    "description": "tan or beige duffel bag",
+    "anchor": "floor",
+    "position": "on the floor beside the white tote bag",
+    "confidence": 0.85,
+    "video_seconds": 25.5
+  },
+  {
+    "label": "bag",
+    "description": "black bag",
+    "anchor": "floor",
+    "position": "on top of a grey storage container beneath the window heater",
+    "confidence": 0.85,
+    "video_seconds": 27.0
+  },
+  {
+    "label": "bag",
+    "description": "large blue shopping tote bag",
+    "anchor": "desk",
+    "position": "underneath the desk next to the wooden chair",
+    "confidence": 0.9,
+    "video_seconds": 29.5
+  },
+  {
+    "label": "notebook",
+    "description": "yellow notebook or folder",
+    "anchor": "desk",
+    "position": "on the wooden desk under the loft bed",
+    "confidence": 0.85,
+    "video_seconds": 30.5
+  },
+  {
+    "label": "bag",
+    "description": "red Snag paper gift or shopping bag",
+    "anchor": "desk",
+    "position": "on the right side of the desk surface",
+    "confidence": 0.95,
+    "video_seconds": 32.5
+  }
+]
