@@ -5,11 +5,61 @@
   "error": null,
   "video_url": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
   "items": [
-    { "label": "keys", "description": "silver keys on a blue lanyard", "anchor": "desk", "position": "on the desk, left of the monitor", "confidence": 0.87, "video_seconds": 4.5 },
-    { "label": "wallet", "description": "brown leather wallet", "anchor": "dresser", "position": "on the dresser, next to the lamp", "confidence": 0.81, "video_seconds": 8.0 },
-    { "label": "phone", "description": "black phone in a clear case", "anchor": "bed", "position": "on the bed, near the pillow", "confidence": 0.92, "video_seconds": 11.2 },
-    { "label": "headphones", "description": "white over-ear headphones", "anchor": "nightstand", "position": "on the nightstand, below the lamp", "confidence": 0.78, "video_seconds": 13.4 },
-    { "label": "charger", "description": "white phone charger with a long cable", "anchor": "nightstand", "position": "plugged in on the nightstand", "confidence": 0.7, "video_seconds": 14.0 },
-    { "label": "glasses", "description": "black round glasses", "anchor": "shelf", "position": "on the shelf, above the desk", "confidence": 0.74, "video_seconds": 6.1 }
+    {
+      "label": "keys",
+      "description": "silver keys on a blue lanyard",
+      "anchor": "desk",
+      "position": "on the desk, left of the monitor",
+      "confidence": 0.87,
+      "video_seconds": 4.5
+    },
+    {
+      "label": "keys",
+      "description": "gold car key with a black fob",
+      "anchor": "dresser",
+      "position": "on the dresser, in the dish",
+      "confidence": 0.83,
+      "video_seconds": 9.2
+    },
+    {
+      "label": "wallet",
+      "description": "brown leather wallet",
+      "anchor": "dresser",
+      "position": "on the dresser, next to the lamp",
+      "confidence": 0.81,
+      "video_seconds": 8.0
+    },
+    {
+      "label": "phone",
+      "description": "black phone in a clear case",
+      "anchor": "bed",
+      "position": "on the bed, near the pillow",
+      "confidence": 0.92,
+      "video_seconds": 11.2
+    },
+    {
+      "label": "headphones",
+      "description": "white over-ear headphones",
+      "anchor": "nightstand",
+      "position": "on the nightstand, below the lamp",
+      "confidence": 0.78,
+      "video_seconds": 13.4
+    },
+    {
+      "label": "charger",
+      "description": "white phone charger with a long cable",
+      "anchor": "nightstand",
+      "position": "plugged in on the nightstand",
+      "confidence": 0.7,
+      "video_seconds": 14.0
+    },
+    {
+      "label": "glasses",
+      "description": "black round glasses",
+      "anchor": "shelf",
+      "position": "on the shelf, above the desk",
+      "confidence": 0.74,
+      "video_seconds": 6.1
+    }
   ]
 }

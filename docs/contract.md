@@ -43,12 +43,26 @@ Every item found in a video looks like this:
 - `answer_question(items, query)` handles fuzzy search ("charger" matches "phone charger") and asks a follow-up if a search could mean two things.
 - `diff_scans(old, new)` returns items that moved, went missing, or are new.
 
+## Several items with the same label
+
+A room can hold two sets of keys, so `GET /find` returns a list: `items` (one entry per match, same fields as the item plus `seen_at`, `clip_url`, `clip_start_seconds`). The frontend still accepts an old single `item`. The `description` is what tells two same-label items apart.
+
+## What "moved" means
+
+`diff_scans(old, new)` in `ai/diff.py`:
+
+1. Items are paired within the same `label`. If each scan has exactly one, they are paired. Otherwise the best matches by `description` similarity (plus a bonus for the same `anchor`) are paired, and weak matches are not.
+2. A paired item **moved** if its `anchor` changed. We compare `anchor`, not `position`, because the AI words the position sentence differently each run.
+3. An old item with no pair is **missing**. A new item with no pair is **new**.
+
+Each entry has `label` and `description`, plus `from_position` and `to_position` (moved), `last_position` (missing) or `position` (new).
+
 ## Open details (agree on these before building against them)
 
 The outline fixes the item shape and the endpoint list, but not the exact response bodies. Fill these in as a team, then update this file:
 
 - [ ] Scan status values (for example `processing`, `done`, `failed`)
 - [ ] Response shape of `POST /scans`, `GET /scans`, `GET /scans/{id}`
-- [ ] Response shape of `GET /find` (last sighting, `scanned_at`, `clip_url`, `past_sightings`, follow-up question)
+- [ ] Response shape of `GET /find` (`items` list, last sighting, `scanned_at`, `clip_url`, `past_sightings`, follow-up question)
 - [ ] Response shape of `GET /changes` (`moved`, `missing`, `new`)
 - [ ] How the video clip URL is served and how the frontend jumps to `video_seconds`

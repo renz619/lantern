@@ -36,11 +36,17 @@ const normalizeScanDetail = (s) => ({
   items: s.items ?? [],
 })
 
+// A search can match several items (two sets of keys), so we always hand the
+// screens a list. An older single `item` reply becomes a list of one.
+const normalizeFindItem = (i) => ({
+  ...i,
+  seen_at: i.seen_at ?? i.scanned_at,
+  clip_start_seconds: i.clip_start_seconds ?? 0,
+})
+
 const normalizeFind = (r) => ({
   found: Boolean(r.found),
-  item: r.item
-    ? { ...r.item, seen_at: r.item.seen_at ?? r.item.scanned_at, clip_start_seconds: r.item.clip_start_seconds ?? 0 }
-    : null,
+  items: (r.items ?? (r.item ? [r.item] : [])).map(normalizeFindItem),
   past_sightings: r.past_sightings ?? [],
   clarify: r.clarify ?? null,
 })

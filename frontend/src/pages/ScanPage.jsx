@@ -126,8 +126,8 @@ export default function ScanPage({ goTo }) {
         <>
           <h2>All done! We found {items.length} {items.length === 1 ? 'item' : 'items'}.</h2>
           <ul className="item-list">
-            {items.map((item) => (
-              <li key={item.label}>
+            {items.map((item, i) => (
+              <li key={item.label + i}>
                 <strong>{item.label}</strong>
                 <span>{item.position}</span>
               </li>

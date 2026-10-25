@@ -43,8 +43,15 @@ function speak(text) {
 
 function spokenResult(reply) {
   if (reply.clarify) return reply.clarify.question
-  if (reply.found && reply.item) {
-    return `Found your ${reply.item.label}. ${reply.item.position}. ${reply.item.description}`
+  if (reply.found && reply.items.length === 1) {
+    const [item] = reply.items
+    return `Found your ${item.label}. ${item.position}. ${item.description}`
+  }
+  if (reply.found && reply.items.length > 1) {
+    const found = reply.items
+      .map((item, i) => `${i === 0 ? 'First' : 'Next'}, ${item.description}, ${item.position}.`)
+      .join(' ')
+    return `I found ${reply.items.length} matches. ${found}`
   }
   return 'We haven’t seen that yet. Try scanning your room again.'
 }
@@ -72,7 +79,7 @@ export default function SearchPage({ goTo }) {
       setResult(reply)
       speak(spokenResult(reply))
       if (reply.clarify) setState('clarify')
-      else setState(reply.found && reply.item ? 'found' : 'notfound')
+      else setState(reply.found && reply.items.length > 0 ? 'found' : 'notfound')
     } catch {
       if (id !== latest.current) return
       setState('error')
@@ -138,7 +145,7 @@ export default function SearchPage({ goTo }) {
       {state === 'loading' && <Loading>Looking for “{query}”…</Loading>}
 
       {state === 'found' && (
-        <ResultCard item={result.item} pastSightings={result.past_sightings} />
+        <ResultCard items={result.items} pastSightings={result.past_sightings} />
       )}
 
       {state === 'clarify' && (

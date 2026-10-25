@@ -23,15 +23,21 @@ export function mockFind(q) {
   if (query.includes('charger')) {
     return {
       found: true,
-      item: null,
+      items: [],
       past_sightings: [],
       clarify: { question: 'Which charger?', options: ['phone charger', 'laptop charger'] },
     }
   }
-  const match = scanDetail.items.find((i) => i.label.includes(query) || query.includes(i.label))
-  if (!query || !match) return { found: false, item: null, past_sightings: [], clarify: null }
+  const matches = scanDetail.items.filter((i) => i.label.includes(query) || query.includes(i.label))
+  if (!query || matches.length === 0) return { found: false, items: [], past_sightings: [], clarify: null }
   return {
     ...find,
-    item: { ...find.item, ...match, scan_id: scanDetail.id, seen_at: scanDetail.created_at, clip_start_seconds: match.video_seconds },
+    items: matches.map((match) => ({
+      ...find.items[0],
+      ...match,
+      scan_id: scanDetail.id,
+      seen_at: scanDetail.created_at,
+      clip_start_seconds: match.video_seconds,
+    })),
   }
 }

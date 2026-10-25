@@ -4,8 +4,8 @@ function Group({ title, rows }) {
     <div className="change-group">
       <h3>{title}</h3>
       <ul>
-        {rows.map((text) => (
-          <li key={text}>{text}</li>
+        {rows.map((text, i) => (
+          <li key={text + i}>{text}</li>
         ))}
       </ul>
     </div>
