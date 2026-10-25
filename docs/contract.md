@@ -26,6 +26,8 @@ Every item found in a video looks like this:
 | `confidence` | How sure the AI is, 0 to 1. Guesses below the cutoff are dropped |
 | `video_seconds` | Seconds into the video where the item was seen |
 
+**Standard names:** the standard item names are the `ALLOWLIST` in `ai/analyze.py`, and any new answer sheet or mock must use them. Run `python scripts/check_labels.py` after adding one.
+
 ## Endpoints
 
 | Endpoint | You send | You get back |
