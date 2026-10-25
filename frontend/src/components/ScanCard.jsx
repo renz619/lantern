@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Loading from './Loading'
 import { getScan } from '../api'
 
 const STATUS_LABELS = { processing: 'Processing', done: 'Done', failed: 'Failed' }
@@ -41,7 +42,7 @@ export default function ScanCard({ scan }) {
 
       {open && (
         <div className="scan-body">
-          {loading && <p role="status">Loading…</p>}
+          {loading && <Loading>Loading…</Loading>}
           {failed && <p role="alert" className="warning">Couldn’t load this scan. Try again.</p>}
           {detail && detail.status !== 'done' && !loading && (
             <p>This scan isn’t ready yet. Close it and tap again in a moment.</p>

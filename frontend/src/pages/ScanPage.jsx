@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import Loading from '../components/Loading'
 import TipsCard from '../components/TipsCard'
 import { uploadScan, getScan } from '../api'
 
@@ -81,6 +82,9 @@ export default function ScanPage({ goTo }) {
   return (
     <>
       <h1>Scan your room</h1>
+      {phase === 'idle' && (
+        <p className="lede">Film a slow spin around the room and we’ll remember where everything is.</p>
+      )}
       {phase === 'idle' && <TipsCard />}
 
       <input
@@ -100,12 +104,12 @@ export default function ScanPage({ goTo }) {
 
       {phase !== 'done' && file && (
         <>
-          <video className="preview" src={previewUrl} controls playsInline />
+          <video className="preview" src={previewUrl} controls playsInline aria-label="Preview of your room video" />
           {file.size > BIG_FILE_BYTES && (
             <p className="warning">This video is large and may take a while to upload.</p>
           )}
           {busy ? (
-            <p role="status" className="status">{MESSAGES[phase]}</p>
+            <Loading>{MESSAGES[phase]}</Loading>
           ) : (
             <div className="actions">
               <button className="primary" onClick={analyze}>
@@ -120,7 +124,7 @@ export default function ScanPage({ goTo }) {
 
       {phase === 'done' && (
         <>
-          <h2>Found {items.length} items</h2>
+          <h2>All done! We found {items.length} {items.length === 1 ? 'item' : 'items'}.</h2>
           <ul className="item-list">
             {items.map((item) => (
               <li key={item.label}>

@@ -1,8 +1,14 @@
 import { useRef, useState } from 'react'
+import Loading from '../components/Loading'
 import ResultCard from '../components/ResultCard'
 import { findItem } from '../api'
 
 const CHIPS = ['keys', 'wallet', 'phone', 'charger', 'glasses']
+
+// Voice search uses the browser's speech recognition. Support varies by browser
+// (and may need HTTPS), so the mic button is hidden when it isn't there.
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
+const voiceSupported = Boolean(SpeechRecognition)
 
 export default function SearchPage({ goTo }) {
   const [query, setQuery] = useState('')
@@ -10,6 +16,8 @@ export default function SearchPage({ goTo }) {
   const [state, setState] = useState('idle')
   const [result, setResult] = useState(null)
   const latest = useRef(0) // ignores replies from older searches
+  const [listening, setListening] = useState(false)
+  const [voiceError, setVoiceError] = useState('')
 
   async function search(text) {
     const q = text.trim()
@@ -29,6 +37,21 @@ export default function SearchPage({ goTo }) {
     }
   }
 
+  function listen() {
+    setVoiceError('')
+    const rec = new SpeechRecognition()
+    rec.lang = 'en-US'
+    rec.onresult = (event) => search(event.results[0][0].transcript)
+    rec.onerror = () => setVoiceError('Couldn’t hear that. Try again or type your search.')
+    rec.onend = () => setListening(false)
+    setListening(true)
+    try {
+      rec.start()
+    } catch {
+      setListening(false)
+    }
+  }
+
   function submit(e) {
     e.preventDefault()
     search(query)
@@ -36,22 +59,29 @@ export default function SearchPage({ goTo }) {
 
   return (
     <>
-      <h1>Where is it?</h1>
+      <h1>What are you looking for?</h1>
+      <p className="lede">Type it, say it, or tap a quick pick below.</p>
 
       <form className="search-form" onSubmit={submit}>
         <input
           type="search"
           aria-label="Item to find"
-          placeholder="keys, wallet, phone…"
+          placeholder="Try “keys” or “wallet”"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
+        {voiceSupported && (
+          <button type="button" onClick={listen} disabled={listening} aria-label="Search by voice">
+            {listening ? 'Listening…' : 'Voice'}
+          </button>
+        )}
         <button type="submit" className="primary" disabled={state === 'loading'}>
           Search
         </button>
       </form>
+      {voiceError && <p role="alert" className="warning">{voiceError}</p>}
 
-      <div className="chips">
+      <div className="chips" role="group" aria-label="Quick picks">
         {CHIPS.map((chip) => (
           <button key={chip} onClick={() => search(chip)} disabled={state === 'loading'}>
             {chip}
@@ -59,7 +89,7 @@ export default function SearchPage({ goTo }) {
         ))}
       </div>
 
-      {state === 'loading' && <p role="status" className="status">Looking for “{query}”…</p>}
+      {state === 'loading' && <Loading>Looking for “{query}”…</Loading>}
 
       {state === 'found' && (
         <ResultCard item={result.item} pastSightings={result.past_sightings} />
@@ -78,7 +108,7 @@ export default function SearchPage({ goTo }) {
 
       {state === 'notfound' && (
         <section className="card">
-          <p>We haven’t seen that yet. Try scanning again.</p>
+          <p>We haven’t seen that yet. Try scanning your room again, and make sure it’s in view.</p>
           <button className="primary" onClick={() => goTo('scan')}>Go to Scan</button>
         </section>
       )}

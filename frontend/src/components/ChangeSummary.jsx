@@ -20,11 +20,11 @@ export default function ChangeSummary({ changes }) {
 
   return (
     <section className="card">
-      <h2>What changed since last time</h2>
-      {nothing && <p>Nothing has moved since the previous scan.</p>}
-      <Group title="Moved" rows={moved} />
-      <Group title="Missing" rows={missing} />
-      <Group title="New" rows={added} />
+      <h2>What changed since last time?</h2>
+      {nothing && <p>Good news: everything is right where you left it.</p>}
+      <Group title="What’s changed" rows={moved} />
+      <Group title="What’s missing" rows={missing} />
+      <Group title="What’s new" rows={added} />
     </section>
   )
 }

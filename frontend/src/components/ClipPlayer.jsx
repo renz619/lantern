@@ -17,6 +17,7 @@ export default function ClipPlayer({ src, startSeconds = 0 }) {
       className="preview"
       src={fullUrl(src) + '#t=' + start}
       controls
+      aria-label="Video clip of where the item was seen"
       playsInline
       preload="metadata"
       onLoadedMetadata={jump}
