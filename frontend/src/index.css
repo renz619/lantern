@@ -167,3 +167,32 @@ button.block {
 .item-list span {
   color: var(--muted);
 }
+
+.search-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.search-form input {
+  flex: 1;
+  min-width: 0;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.result h2 {
+  margin: 0 0 4px;
+  text-transform: capitalize;
+}
+
+.result .position {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+}
