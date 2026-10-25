@@ -1,0 +1,117 @@
+{
+    "video": "diffObj.MOV",
+    "items": [
+        {
+            "label": "laptop",
+            "description": "black open laptop on the desk",
+            "anchor": "desk",
+            "position": "on the desk under the loft bed, behind the keyboard",
+            "video_seconds": 7.0
+        },
+        {
+            "label": "bag",
+            "description": "red paper shopping bag with white text",
+            "anchor": "desk",
+            "position": "on the right side of the desk under the loft bed",
+            "video_seconds": 8.5
+        },
+        {
+            "label": "backpack",
+            "description": "black backpack upright on the floor",
+            "anchor": "floor",
+            "position": "on the floor between the cart and the TV stand",
+            "video_seconds": 12.0
+        },
+        {
+            "label": "remote",
+            "description": "black TV remote control",
+            "anchor": "tv stand",
+            "position": "on the TV stand right in front of the TV screen",
+            "video_seconds": 15.0
+        },
+        {
+            "label": "water bottle",
+            "description": "tall orange water bottle with black cap",
+            "anchor": "tv stand",
+            "position": "on the TV stand to the right of the TV",
+            "video_seconds": 15.5
+        },
+        {
+            "label": "charger",
+            "description": "black power brick charger with cables",
+            "anchor": "floor",
+            "position": "on the grey rug in front of the TV stand",
+            "video_seconds": 15.5
+        },
+        {
+            "label": "bag",
+            "description": "cream and blue duffle bag",
+            "anchor": "tv stand",
+            "position": "in the open compartment underneath the TV stand",
+            "video_seconds": 16.5
+        },
+        {
+            "label": "laptop",
+            "description": "silver HP laptop",
+            "anchor": "couch",
+            "position": "resting flat on the seat cushion of the grey couch",
+            "video_seconds": 19.5
+        },
+        {
+            "label": "water bottle",
+            "description": "black water bottle with carry loop handle",
+            "anchor": "couch",
+            "position": "on the back of the grey couch seat cushion",
+            "video_seconds": 21.0
+        },
+        {
+            "label": "notebook",
+            "description": "yellow notebook",
+            "anchor": "couch",
+            "position": "sitting on the gray cushion stool",
+            "video_seconds": 21.0
+        },
+        {
+            "label": "remote",
+            "description": "black TV remote control",
+            "anchor": "stool",
+            "position": "sitting on the yellow notebook on the grey cushion stool",
+            "video_seconds": 21.0
+        },
+        {
+            "label": "umbrella",
+            "description": "blue patterned umbrella with a curved wooden handle",
+            "anchor": "couch",
+            "position": "lying across the armrest of the grey couch",
+            "video_seconds": 22.0
+        },
+        {
+            "label": "tablet",
+            "description": "black tablet lying flat",
+            "anchor": "chair",
+            "position": "on the seat of the wooden chair",
+            "video_seconds": 26.5
+        },
+        {
+            "label": "mouse",
+            "description": "white computer mouse",
+            "anchor": "chair",
+            "position": "on the wooden chair seat next to the tablet",
+            "video_seconds": 26.5
+        },
+        {
+            "label": "mug",
+            "description": "dark blue ceramic mug with white lettering",
+            "anchor": "desk",
+            "position": "on the desk under the loft bed next to the window",
+            "video_seconds": 28.5
+        },
+        {
+            "label": "hat",
+            "description": "olive green baseball cap",
+            "anchor": "bed",
+            "position": "hanging on the corner post of the wooden loft bed",
+            "video_seconds": 30.0
+        }
+    ]
+}
