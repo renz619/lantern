@@ -44,7 +44,7 @@ Return one entry for every separate physical item. If the room has two wallets o
 Fields:
 - label: the item's standard name. Use exactly one name from the item list above (use "airpods" for any earbuds, "water bottle" for any bottle, "backpack" for a backpack, "bag" for other bags).
 - description: a short description of this specific item (color, brand, material, distinctive features), so two items with the same label can be told apart.
-- anchor: the single nearest piece of furniture, one lowercase word or short phrase (desk, chair, shelf, bed, floor, nightstand, dresser, couch, table). Never a person, appliance, or gadget.
+- anchor: the single nearest piece of furniture. Choose exactly one of: {anchors}. If none fits, pick the closest. Never a person, appliance, or gadget, and use the same word every time for the same spot.
 - position: a short natural sentence saying where it is, using furniture and landmarks, such as "on the desk, left of the monitor" or "on top of the PC".
 - confidence: a number from 0 to 1 for how sure you are that this is the item you named. Be honest; use below 0.5 for guesses.
 - video_seconds: the number of seconds from the start of the video at which the item is clearly visible, as a number (for example 14.5, not "00:14").
