@@ -48,7 +48,7 @@ def score_item(item, words):
     if not words:
         return 0.0
     phrase = " ".join(words)
-    label = item["label"].lower()
+    label = normalize_label(item["label"])  # saved items may hold an older name, like "id card"
     label_words = _words(label)
     text_words = label_words + _words(item.get("description"))
 

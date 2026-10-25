@@ -19,21 +19,21 @@
             "label": "key",
             "description": "key with blue key chain",
             "anchor": "desk",
-            "position": "on the desk under the loft bed",
+            "position": "on the desk under the loft bed in front of fan and black water bottle",
             "video_seconds": 8.0
         },
         {
             "label": "umbrella",
             "description": "black and blue patterned umbrella with wooden handle",
-            "anchor": "table",
-            "position": "on the grey shag rug in front of the TV stand",
+            "anchor": "tv stand",
+            "position": "on the white tv stand in front of the tv",
             "video_seconds": 16.5
         },
         {
             "label": "notebook",
             "description": "yellow notebook with a blue label",
             "anchor": "floor",
-            "position": "on the grey shag rug in front of the TV stand",
+            "position": "on the grey shag rug on the floor in front of the TV stand",
             "video_seconds": 16.5
         },
         {
@@ -91,6 +91,13 @@
             "anchor": "floor",
             "position": "on the floor behind the wooden chair",
             "video_seconds": 28.0
+        },
+        {
+            "label": "bag",
+            "description": "red paper gift bag with 'Snag' printed on it",
+            "anchor": "desk",
+            "position": "on the desk under the loft bed",
+            "video_seconds": 30.0
         },
         {
             "label": "backpack",

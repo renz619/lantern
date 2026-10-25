@@ -1,0 +1,90 @@
+[
+  {
+    "label": "tablet",
+    "description": "black tablet lying flat",
+    "anchor": "desk",
+    "position": "on the desk pullout under the loft bed",
+    "confidence": 0.9,
+    "video_seconds": 10.0
+  },
+  {
+    "label": "charger",
+    "description": "white charging cable plugged into the tablet",
+    "anchor": "desk",
+    "position": "plugged into the tablet on the desk under the loft bed",
+    "confidence": 0.85,
+    "video_seconds": 10.0
+  },
+  {
+    "label": "glasses",
+    "description": "pair of eyeglasses",
+    "anchor": "desk",
+    "position": "on the desk in front of the water bottle",
+    "confidence": 0.85,
+    "video_seconds": 10.5
+  },
+  {
+    "label": "water bottle",
+    "description": "tall black reusable water bottle",
+    "anchor": "desk",
+    "position": "on the desk next to the red gift bag",
+    "confidence": 0.95,
+    "video_seconds": 10.5
+  },
+  {
+    "label": "bag",
+    "description": "red and white Snag gift bag",
+    "anchor": "desk",
+    "position": "on the desk under the loft bed",
+    "confidence": 0.9,
+    "video_seconds": 10.5
+  },
+  {
+    "label": "backpack",
+    "description": "backpack",
+    "anchor": "floor",
+    "position": "on the rug beside the TV stand",
+    "confidence": 0.95,
+    "video_seconds": 14.0
+  },
+  {
+    "label": "keys",
+    "description": "set of keys with metal key, fob, and orange-and-black strap",
+    "anchor": "couch",
+    "position": "on the cushion of the gray couch",
+    "confidence": 0.95,
+    "video_seconds": 17.5
+  },
+  {
+    "label": "water bottle",
+    "description": "black water bottle with handle lid",
+    "anchor": "floor",
+    "position": "on the floor directly behind the couch",
+    "confidence": 0.9,
+    "video_seconds": 18.0
+  },
+  {
+    "label": "id card",
+    "description": "white and red identity card",
+    "anchor": "chair",
+    "position": "on the seat of the wooden desk chair",
+    "confidence": 0.9,
+    "video_seconds": 23.5
+  },
+  {
+    "label": "phone",
+    "description": "black smartphone",
+    "anchor": "desk",
+    "position": "on the desk under the second loft bed",
+    "confidence": 0.9,
+    "video_seconds": 25.5
+  },
+  {
+    "label": "bag",
+    "description": "red and white Snag gift bag",
+    "anchor": "desk",
+    "position": "on the desk surface under the second loft bed",
+    "confidence": 0.9,
+    "video_seconds": 26.5
+  }
+]

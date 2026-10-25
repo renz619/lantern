@@ -14,7 +14,7 @@ from dotenv import load_dotenv
 from pydantic import BaseModel
 
 MODEL = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
-PROMPT_FILE = Path(__file__).parent / "prompts" / f"{os.getenv('PROMPT_VERSION', 'analyze_v2')}.txt"
+PROMPT_FILE = Path(__file__).parent / "prompts" / f"{os.getenv('PROMPT_VERSION', 'analyze_v5')}.txt"
 CONFIDENCE_CUTOFF = 0.5
 REQUEST_TIMEOUT_MS = 240_000  # give up on a Gemini request that hangs after 4 minutes
 
@@ -107,10 +107,12 @@ def generate_with_retry(client, contents, config, attempts=4):
     for attempt in range(attempts):
         try:
             return client.models.generate_content(model=MODEL, contents=contents, config=config)
-        except (errors.ServerError, httpx.TimeoutException):
-            if attempt == attempts - 1:
+        except (errors.ServerError, errors.ClientError, httpx.TimeoutException) as error:
+            rate_limited = getattr(error, "code", None) == 429
+            retryable = rate_limited or not isinstance(error, errors.ClientError)
+            if not retryable or attempt == attempts - 1:
                 raise
-            time.sleep(10 * (attempt + 1))
+            time.sleep((30 if rate_limited else 10) * (attempt + 1))
 
 
 def call_gemini(path, prompt):

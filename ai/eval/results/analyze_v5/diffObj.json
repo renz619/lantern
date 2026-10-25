@@ -1,0 +1,154 @@
+[
+  {
+    "label": "laptop",
+    "description": "black laptop",
+    "anchor": "desk",
+    "position": "on the desk under the lofted bed",
+    "confidence": 0.88,
+    "video_seconds": 8.0
+  },
+  {
+    "label": "bag",
+    "description": "red Snag paper gift bag",
+    "anchor": "desk",
+    "position": "on the desk next to the chair",
+    "confidence": 0.95,
+    "video_seconds": 8.5
+  },
+  {
+    "label": "backpack",
+    "description": "black backpack",
+    "anchor": "floor",
+    "position": "on the floor beside the rolling utility cart",
+    "confidence": 0.96,
+    "video_seconds": 12.0
+  },
+  {
+    "label": "umbrella",
+    "description": "compact black umbrella with orange strap",
+    "anchor": "floor",
+    "position": "leaning in front of the black backpack on the floor",
+    "confidence": 0.9,
+    "video_seconds": 12.0
+  },
+  {
+    "label": "charger",
+    "description": "black power adapter brick and charging cords",
+    "anchor": "floor",
+    "position": "on the grey area rug in front of the TV stand",
+    "confidence": 0.92,
+    "video_seconds": 15.0
+  },
+  {
+    "label": "remote",
+    "description": "black remote control",
+    "anchor": "tv stand",
+    "position": "on the TV stand directly in front of the TV screen",
+    "confidence": 0.85,
+    "video_seconds": 15.0
+  },
+  {
+    "label": "water bottle",
+    "description": "orange water bottle with black cap",
+    "anchor": "tv stand",
+    "position": "on the TV stand to the right of the TV screen",
+    "confidence": 0.95,
+    "video_seconds": 16.0
+  },
+  {
+    "label": "bag",
+    "description": "cream and blue duffel bag",
+    "anchor": "tv stand",
+    "position": "on the lower open shelf of the TV stand",
+    "confidence": 0.93,
+    "video_seconds": 16.5
+  },
+  {
+    "label": "laptop",
+    "description": "silver HP laptop",
+    "anchor": "couch",
+    "position": "on the seat cushion of the grey sofa",
+    "confidence": 0.97,
+    "video_seconds": 19.0
+  },
+  {
+    "label": "water bottle",
+    "description": "black water bottle with handle lid",
+    "anchor": "couch",
+    "position": "on the sofa cushion in front of the silver laptop",
+    "confidence": 0.94,
+    "video_seconds": 20.0
+  },
+  {
+    "label": "umbrella",
+    "description": "blue patterned umbrella with a curved wooden handle",
+    "anchor": "couch",
+    "position": "resting across the sofa cushions",
+    "confidence": 0.94,
+    "video_seconds": 21.0
+  },
+  {
+    "label": "bag",
+    "description": "white and blue duffel bag",
+    "anchor": "floor",
+    "position": "on the floor between the stool and storage bench",
+    "confidence": 0.9,
+    "video_seconds": 23.0
+  },
+  {
+    "label": "backpack",
+    "description": "black backpack",
+    "anchor": "bench",
+    "position": "on top of the grey storage bench under the window",
+    "confidence": 0.91,
+    "video_seconds": 24.5
+  },
+  {
+    "label": "tablet",
+    "description": "black tablet",
+    "anchor": "chair",
+    "position": "on the seat of the wooden chair",
+    "confidence": 0.89,
+    "video_seconds": 26.5
+  },
+  {
+    "label": "mouse",
+    "description": "white computer mouse",
+    "anchor": "chair",
+    "position": "on the wooden chair seat next to the tablet",
+    "confidence": 0.92,
+    "video_seconds": 26.5
+  },
+  {
+    "label": "bag",
+    "description": "blue reusable tote bag",
+    "anchor": "floor",
+    "position": "on the floor behind the wooden chair",
+    "confidence": 0.88,
+    "video_seconds": 26.5
+  },
+  {
+    "label": "mug",
+    "description": "dark blue ceramic coffee mug",
+    "anchor": "desk",
+    "position": "on the desk surface under the bunk bed",
+    "confidence": 0.94,
+    "video_seconds": 28.0
+  },
+  {
+    "label": "hat",
+    "description": "olive green RICE baseball cap",
+    "anchor": "bed",
+    "position": "hanging on the wooden bunk bed corner post",
+    "confidence": 0.97,
+    "video_seconds": 30.0
+  },
+  {
+    "label": "bag",
+    "description": "red Snag paper gift bag",
+    "anchor": "bed",
+    "position": "resting on the wooden bunk bed frame rail",
+    "confidence": 0.92,
+    "video_seconds": 32.0
+  }
+]

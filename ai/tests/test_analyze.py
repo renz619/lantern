@@ -24,6 +24,12 @@ def test_aliases_become_one_label():
     assert normalize_label("Ballpoint Pen") == "pen"
 
 
+def test_cards_and_wallets_share_one_label():
+    for name in ("id card", "Credit Card", "debit card", "student id", "card holder"):
+        assert normalize_label(name) == "wallet", name
+    assert normalize_label("gift card") == "gift card"
+
+
 def test_low_confidence_dropped():
     assert clean_items([item("keys", 1, confidence=0.3)]) == []
 

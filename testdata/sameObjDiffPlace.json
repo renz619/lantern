@@ -23,6 +23,13 @@
             "video_seconds": 10.0
         },
         {
+            "label": "charger",
+            "description": "white charger/cable",
+            "anchor": "desk",
+            "position": "plugged into the tablet on the desk, under the loft bed",
+            "video_seconds": 10.0
+        },
+        {
             "label": "bag",
             "description": "red paper bag with the words 'Snag' on it",
             "anchor": "desk",
@@ -54,14 +61,7 @@
             "label": "water bottle",
             "description": "black water bottle with black handle",
             "anchor": "couch",
-            "position": "on the grey couch",
-            "video_seconds": 19.0
-        },
-        {
-            "label": "keys",
-            "description": "key with blue key chain",
-            "anchor": "floor",
-            "position": "on top of grey cushion stool on the floor",
+            "position": "leaning on the armrest of the grey couch near the edge",
             "video_seconds": 19.0
         },
         {

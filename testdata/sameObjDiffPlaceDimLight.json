@@ -30,6 +30,13 @@
             "video_seconds": 11.0
         },
         {
+            "label": "bag",
+            "description": "red paper bag with white lettering saying 'Snag'",
+            "anchor": "desk",
+            "position": "on the desk, behidn the water bottle and in front of the laptop under the loft bed",
+            "video_seconds": 11.0
+        },
+        {
             "label": "backpack",
             "description": "blue backpack",
             "anchor": "floor",
@@ -76,7 +83,14 @@
             "description": "black phone lying face up",
             "anchor": "desk",
             "position": "on the desk under the loft bed",
-            "video_seconds": 27.0
+            "video_seconds": 28.0
+        },
+        {
+            "label": "bag",
+            "description": "red paper bag with white lettering saying 'Snag'",
+            "anchor": "desk",
+            "position": "on the desk under the loft bed",
+            "video_seconds": 30.0
         }
     ]
 }

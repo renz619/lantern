@@ -2,6 +2,13 @@
     "video": "sameObjDimLight.MOV",
     "items": [
         {
+            "label": "tablet",
+            "description": "black tablet with white stylus",
+            "anchor": "desk",
+            "position": "on the desk under the loft bed in front of the fan",
+            "video_seconds": 7.0
+        },
+        {
             "label": "laptop",
             "description": "black laptop",
             "anchor": "desk",
@@ -26,7 +33,7 @@
             "label": "water bottle",
             "description": "black water bottle",
             "anchor": "cart",
-            "position": "on the small black utility cart on the floor next to the white tv stand",
+            "position": "on the top storage caddy of the small black utility cart on the floor left of the white tv stand",
             "video_seconds": 10.0
         },
         {
@@ -35,20 +42,6 @@
             "anchor": "floor",
             "position": "on the floor leaning against the white tv stand",
             "video_seconds": 10.0
-        },
-        {
-            "label": "glasses",
-            "description": "gray framed glasses",
-            "anchor": "tv stand",
-            "position": "on top of the white tv stand next to the keys with the blue key chain",
-            "video_seconds": 13.0
-        },
-        {
-            "label": "keys",
-            "description": "key with blue key chain",
-            "anchor": "tv stand",
-            "position": "on top of the white tv stand next to the glasses",
-            "video_seconds": 14.0
         },
         {
             "label": "water bottle",
@@ -62,14 +55,14 @@
             "description": "white bank of america wallet holding cards",
             "anchor": "couch",
             "position": "on top of the grey couch near the edge",
-            "video_seconds": 15.0
+            "video_seconds": 16.0
         },
         {
             "label": "bag",
             "description": "blue tote bag",
             "anchor": "stool",
-            "position": "on grey cushioned stool on the floor",
-            "video_seconds": 17.0
+            "position": "on grey cushioned stool on the floor in frontt of the mini fridge",
+            "video_seconds": 18.0
         },
         {
             "label": "bag",

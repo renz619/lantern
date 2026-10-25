@@ -1,0 +1,82 @@
+[
+  {
+    "label": "water bottle",
+    "description": "black water bottle with handle cap",
+    "anchor": "table",
+    "position": "on the white round table near the window",
+    "confidence": 0.95,
+    "video_seconds": 5.0
+  },
+  {
+    "label": "keys",
+    "description": "metal key on a blue Members Only lanyard strap",
+    "anchor": "table",
+    "position": "on the white round table in front of the water bottle",
+    "confidence": 0.95,
+    "video_seconds": 5.0
+  },
+  {
+    "label": "keys",
+    "description": "set of metal keys on a ring",
+    "anchor": "dresser",
+    "position": "on the top left surface of the wooden dresser",
+    "confidence": 0.9,
+    "video_seconds": 9.0
+  },
+  {
+    "label": "water bottle",
+    "description": "tall black bottle or tumbler",
+    "anchor": "dresser",
+    "position": "on the top right surface of the wooden dresser",
+    "confidence": 0.9,
+    "video_seconds": 10.0
+  },
+  {
+    "label": "phone",
+    "description": "black smartphone lying flat",
+    "anchor": "shelf",
+    "position": "on the wooden surface inside the recessed alcove",
+    "confidence": 0.95,
+    "video_seconds": 13.0
+  },
+  {
+    "label": "pencil",
+    "description": "mechanical pencil with clear barrel and black grip",
+    "anchor": "table",
+    "position": "on the white round table",
+    "confidence": 0.9,
+    "video_seconds": 18.0
+  },
+  {
+    "label": "gift card",
+    "description": "red Target gift card with white logo",
+    "anchor": "couch",
+    "position": "on the blue cushion of the booth seat",
+    "confidence": 0.9,
+    "video_seconds": 18.0
+  },
+  {
+    "label": "gift card",
+    "description": "round Starbucks logo gift card",
+    "anchor": "couch",
+    "position": "on the blue cushion of the booth seat next to the red card",
+    "confidence": 0.85,
+    "video_seconds": 18.0
+  },
+  {
+    "label": "airpods",
+    "description": "white AirPods charging case",
+    "anchor": "couch",
+    "position": "on the blue corner cushion of the booth seat",
+    "confidence": 0.95,
+    "video_seconds": 20.0
+  },
+  {
+    "label": "bag",
+    "description": "dark blue tote bag with Annapurna Labs Amazon logo",
+    "anchor": "couch",
+    "position": "on the blue cushion of the booth seat beneath the bulletin board",
+    "confidence": 0.95,
+    "video_seconds": 22.0
+  }
+]
