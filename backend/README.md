@@ -54,6 +54,21 @@ Successful output:
 FastAPI's interactive API documentation is available at
 <http://127.0.0.1:8000/docs> while the server is running.
 
+## Mock API checkpoint
+
+The current endpoints return predictable fake data so the frontend and backend
+can be tested together before the database and Gemini integration exist:
+
+- `POST /scans` accepts a multipart field named `video` and returns scan ID `99`.
+- `GET /scans` returns the mock scan history, newest first.
+- `GET /scans/{id}` returns scan status and items. Scan `99` changes from
+  `processing` to `done` on its third status check.
+- `GET /find?q=keys` returns every matching item, including duplicate labels.
+- `GET /changes` returns mock moved, missing, and new items.
+
+The mock upload is not written to disk and is not sent to Gemini. Those behaviors
+belong to later checkpoints.
+
 ## Frontend access (CORS)
 
 CORS is the browser permission policy that controls which website addresses may
@@ -78,4 +93,4 @@ From `backend/`, with the virtual environment active:
 python -m pytest -q
 ```
 
-A successful run ends with `2 passed`.
+A successful run currently ends with `10 passed`.

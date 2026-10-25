@@ -3,6 +3,8 @@ import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from app.routers import changes, find, scans
+
 
 DEFAULT_CORS_ORIGINS = (
     "http://localhost:5173",
@@ -32,6 +34,9 @@ def create_app() -> FastAPI:
         allow_methods=["GET", "POST"],
         allow_headers=["*"],
     )
+    application.include_router(scans.router)
+    application.include_router(find.router)
+    application.include_router(changes.router)
 
     @application.get("/health")
     def health() -> dict[str, str]:
