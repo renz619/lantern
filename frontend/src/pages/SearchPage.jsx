@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Loading from '../components/Loading'
 import ResultCard from '../components/ResultCard'
 import { findItem } from '../api'
@@ -10,6 +10,45 @@ const CHIPS = ['keys', 'wallet', 'phone', 'charger', 'glasses']
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
 const voiceSupported = Boolean(SpeechRecognition)
 
+// Results are read aloud with the browser's speech synthesis.
+const speechSupported = 'speechSynthesis' in window
+
+// Browsers ship a mix of voices; neural/"natural" ones sound far better than the default.
+function voiceScore(v) {
+  if (!v.lang.startsWith('en')) return -1
+  let score = v.lang === 'en-US' ? 1 : 0
+  if (/natural|neural/i.test(v.name)) score += 10 // Edge "Online (Natural)" voices
+  if (/premium|enhanced/i.test(v.name)) score += 6 // macOS / iOS
+  if (/google/i.test(v.name)) score += 4 // Chrome
+  if (/aria|jenny|samantha|ava|zoe/i.test(v.name)) score += 2
+  if (!v.localService) score += 1 // cloud voices are usually better
+  return score
+}
+
+function bestVoice() {
+  const voices = window.speechSynthesis.getVoices()
+  return voices.reduce((best, v) => (voiceScore(v) > (best ? voiceScore(best) : -1) ? v : best), null)
+}
+
+function speak(text) {
+  if (!speechSupported) return
+  window.speechSynthesis.cancel()
+  const utterance = new SpeechSynthesisUtterance(text)
+  const voice = bestVoice() // voices load async, so look up at speak time
+  if (voice) utterance.voice = voice
+  utterance.lang = voice ? voice.lang : 'en-US'
+  utterance.rate = 0.95
+  window.speechSynthesis.speak(utterance)
+}
+
+function spokenResult(reply) {
+  if (reply.clarify) return reply.clarify.question
+  if (reply.found && reply.item) {
+    return `Found your ${reply.item.label}. ${reply.item.position}. ${reply.item.description}`
+  }
+  return 'We haven’t seen that yet. Try scanning your room again.'
+}
+
 export default function SearchPage({ goTo }) {
   const [query, setQuery] = useState('')
   // 'idle', 'loading', 'found', 'clarify', 'notfound' or 'error'
@@ -18,6 +57,8 @@ export default function SearchPage({ goTo }) {
   const latest = useRef(0) // ignores replies from older searches
   const [listening, setListening] = useState(false)
   const [voiceError, setVoiceError] = useState('')
+
+  useEffect(() => () => speechSupported && window.speechSynthesis.cancel(), [])
 
   async function search(text) {
     const q = text.trim()
@@ -29,6 +70,7 @@ export default function SearchPage({ goTo }) {
       const reply = await findItem(q)
       if (id !== latest.current) return
       setResult(reply)
+      speak(spokenResult(reply))
       if (reply.clarify) setState('clarify')
       else setState(reply.found && reply.item ? 'found' : 'notfound')
     } catch {
@@ -88,6 +130,10 @@ export default function SearchPage({ goTo }) {
           </button>
         ))}
       </div>
+
+      {speechSupported && result && (state === 'found' || state === 'clarify' || state === 'notfound') && (
+        <button type="button" onClick={() => speak(spokenResult(result))}>Read aloud again</button>
+      )}
 
       {state === 'loading' && <Loading>Looking for “{query}”…</Loading>}
 
