@@ -7,6 +7,7 @@ from app.database import create_scan, get_database_path, get_scan as get_stored_
 from app.database import list_scans as list_stored_scans
 from app.dependencies import DatabaseConnection
 from app.schemas import ScanCreated, ScanDetail, ScanSummary
+from app.services.media import scan_video_url
 from app.services.processing import process_scan
 from app.services.uploads import (
     EmptyUploadError,
@@ -68,6 +69,6 @@ def get_scan(scan_id: int, database: DatabaseConnection) -> dict:
         "created_at": scan["created_at"],
         "status": scan["status"],
         "error": scan["error"],
-        "video_url": None,
+        "video_url": scan_video_url(scan),
         "items": scan["items"],
     }

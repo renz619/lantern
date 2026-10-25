@@ -61,7 +61,11 @@ The scan endpoints now use real local storage:
 - `POST /scans` accepts a multipart field named `video`, saves it under a random
   server-generated filename, creates a SQLite scan, and starts analysis.
 - `GET /scans` reads scan history from SQLite, newest first.
-- `GET /scans/{id}` reads status and saved sightings from SQLite.
+- `GET /scans/{id}` reads status and saved sightings from SQLite and includes a
+  `video_url` when the uploaded file is available.
+- `GET /media/scans/{id}/video` safely serves that scan's original video. It
+  supports browser range requests, so a video player can seek to a sighting's
+  `video_seconds` without downloading the entire file first.
 
 Supported uploads are `.mp4`, `.mov`, `.webm`, and `.mkv`, up to 250 MB by
 default. Configure storage and the size limit with:
@@ -85,7 +89,8 @@ export GEMINI_API_KEY="your-key-here"
 
 `GEMINI_MOCK=1` is rejected when `LANTERN_ANALYZER=gemini`, which prevents a
 real failure from appearing to be a fake success. `GET /find` and `GET /changes`
-still return mock responses; real search, changes, and media URLs come later.
+still return mock responses. Short ffmpeg-generated clips are not created yet;
+the current media URL plays and seeks within the original uploaded video.
 
 ## SQLite storage checkpoint
 
@@ -130,4 +135,4 @@ From `backend/`, with the virtual environment active:
 python -m pytest -q
 ```
 
-A successful run currently ends with `24 passed`.
+A successful run currently ends with `30 passed`.

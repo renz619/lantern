@@ -5,7 +5,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
-from app.routers import changes, find, scans
+from app.routers import changes, find, media, scans
 
 
 DEFAULT_CORS_ORIGINS = (
@@ -43,6 +43,7 @@ def create_app() -> FastAPI:
         allow_methods=["GET", "POST"],
         allow_headers=["*"],
     )
+    application.include_router(media.router)
     application.include_router(scans.router)
     application.include_router(find.router)
     application.include_router(changes.router)
