@@ -43,7 +43,9 @@ def test_phone_does_not_match_phone_charger_when_phone_exists():
 
 
 def test_alias_and_plural_queries():
-    assert answer_question(ITEMS, "earbuds")["matches"][0]["label"] == "airpods"
+    earbuds = [item("earbuds", "white earbuds in a case", "on the nightstand", anchor="nightstand")]
+    assert answer_question(earbuds, "earphones")["matches"][0]["label"] == "earbuds"
+    assert answer_question(ITEMS, "earbuds")["status"] == "not_found"  # airpods are a different label now
     assert answer_question(ITEMS, "my bottle")["matches"][0]["label"] == "water bottle"
 
 
