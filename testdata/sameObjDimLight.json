@@ -1,0 +1,68 @@
+{
+    "video": "sameObjDimLight.MOV",
+    "items": [
+        {
+            "label": "bag",
+            "description": "red paper gift bag with 'Snag' printed on it",
+            "anchor": "desk",
+            "position": "on the desk under the loft bed",
+            "video_seconds": 8.0
+        },
+        {
+            "label": "key",
+            "description": "multicolored keys with a UT orange decoration and a car key sticking out to the left",
+            "anchor": "desk",
+            "position": "on the desk, in front of the keyboard",
+            "video_seconds": 8.5
+        },
+        {
+            "label": "water bottle",
+            "description": "black Owala water bottle",
+            "anchor": "table",
+            "position": "on the small black utility cart on the floor next to the white tv stand",
+            "video_seconds": 10.0
+        },
+        {
+            "label": "backpack",
+            "description": "blue backpack",
+            "anchor": "floor",
+            "position": "on the floor leaning against the white tv stand",
+            "video_seconds": 10.0
+        },
+        {
+            "label": "glasses",
+            "description": "gray framed glasses",
+            "anchor": "table",
+            "position": "on top of the white tv stand on the floor",
+            "video_seconds": 13.0
+        },
+        {
+            "label": "key",
+            "description": "key with black key chain",
+            "anchor": "table",
+            "position": "on top of the white tv stand on the floor",
+            "video_seconds": 14.0
+        },
+        {
+            "label": "wallet",
+            "description": "white bank of america wallet",
+            "anchor": "couch",
+            "position": "on top of the grey couch",
+            "video_seconds": 16.0
+        },
+        {
+            "label": "bag",
+            "description": "blue toat bag",
+            "anchor": "floor",
+            "position": "on grey cushioned stool on the floor",
+            "video_seconds": 17.0
+        },
+        {
+            "label": "water bottle",
+            "description": "black water bottle with grey and white lid",
+            "anchor": "chair",
+            "position": "on the wooden chair",
+            "video_seconds": 22.0
+        }
+    ]
+}
