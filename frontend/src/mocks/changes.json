@@ -1,6 +1,6 @@
 {
-  "from_scan": 2,
-  "to_scan": 3,
+  "from_scan": 13,
+  "to_scan": 14,
   "moved": [
     { "label": "keys", "from_position": "on the kitchen counter", "to_position": "on the desk, left of the monitor" }
   ],
