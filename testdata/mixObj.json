@@ -1,5 +1,5 @@
 {
-    "video": "mixObjDimLight.MOV",
+    "video": "mixObj.MOV",
     "items": [
         {
             "label": "water bottle",
@@ -14,6 +14,20 @@
             "anchor": "desk",
             "position": "on the desk under the loft bed",
             "video_seconds": 8.0
+        },
+        {
+            "label": "key",
+            "description": "key with blue key chain",
+            "anchor": "desk",
+            "position": "on the desk under the loft bed",
+            "video_seconds": 8.0
+        },
+        {
+            "label": "umbrella",
+            "description": "black and blue patterned umbrella with wooden handle",
+            "anchor": "table",
+            "position": "on the grey shag rug in front of the TV stand",
+            "video_seconds": 16.5
         },
         {
             "label": "notebook",
@@ -44,10 +58,17 @@
             "video_seconds": 20.5
         },
         {
+            "label": "glasses",
+            "description": "grey glasses",
+            "anchor": "floor",
+            "position": "on the stool on the floor near the mini fridge",
+            "video_seconds": 22.0
+        },
+        {
             "label": "water bottle",
             "description": "tall orange water bottle",
             "anchor": "floor",
-            "position": "on the floor near the mini fridge and stool",
+            "position": "on the stool on the floor near the mini fridge",
             "video_seconds": 22.0
         },
         {
@@ -56,13 +77,6 @@
             "anchor": "floor",
             "position": "on the floor in front of the storage chest",
             "video_seconds": 23.0
-        },
-        {
-            "label": "glasses",
-            "description": "pair of glasses with dark frames",
-            "anchor": "chest",
-            "position": "on top of the grey storage chest below the window",
-            "video_seconds": 23.5
         },
         {
             "label": "umbrella",

@@ -5,7 +5,14 @@
             "label": "mouse",
             "description": "black computer mouse",
             "anchor": "desk",
-            "position": "on the mouse pad on the desk under the loft bed",
+            "position": "on the desk under the loft bed",
+            "video_seconds": 9.0
+        },
+        {
+            "label": "laptop",
+            "description": "black laptop with stickers",
+            "anchor": "desk",
+            "position": "on the desk under the loft bed",
             "video_seconds": 9.0
         },
         {
@@ -17,9 +24,16 @@
         },
         {
             "label": "backpack",
-            "description": "black backpack with a yellow strap accent",
+            "description": "black backpack",
             "anchor": "floor",
             "position": "on the floor leaning against a small utility cart",
+            "video_seconds": 14.0
+        },
+        {
+            "label": "umbrella",
+            "description": "black compact umbrella with a wooden handle",
+            "anchor": "floor",
+            "position": "on the floor leaning against a the black backpack",
             "video_seconds": 14.0
         },
         {
@@ -35,6 +49,13 @@
             "anchor": "table",
             "position": "on the white TV stand in front of the TV",
             "video_seconds": 18.5
+        },
+        {
+            "label": "pencil",
+            "description": "green mechanical pencil",
+            "anchor": "table",
+            "position": "on the white TV stand to the right of the TV",
+            "video_seconds": 19.0
         },
         {
             "label": "water bottle",
@@ -65,6 +86,13 @@
             "video_seconds": 24.5
         },
         {
+            "label": "notebook",
+            "description": "yellow notebook",
+            "anchor": "stool",
+            "position": "resting on black cushion stool",
+            "video_seconds": 26.0
+        },
+        {
             "label": "umbrella",
             "description": "compact umbrella with patterned canopy",
             "anchor": "couch",
@@ -81,6 +109,13 @@
         {
             "label": "tablet",
             "description": "black tablet or portable device",
+            "anchor": "chair",
+            "position": "on the seat of the wooden chair",
+            "video_seconds": 33.0
+        },
+        {
+            "label": "mouse",
+            "description": "white mouse",
             "anchor": "chair",
             "position": "on the seat of the wooden chair",
             "video_seconds": 33.0

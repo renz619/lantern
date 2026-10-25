@@ -23,6 +23,13 @@
             "video_seconds": 4.5
         },
         {
+            "label": "debit card",
+            "description": "red debit card",
+            "anchor": "dresser",
+            "position": "on top of the wooden dresser to the right of the mirror",
+            "video_seconds": 9.5
+        },
+        {
             "label": "water bottle",
             "description": "tall dark water bottle",
             "anchor": "dresser",
@@ -31,7 +38,7 @@
         },
         {
             "label": "backpack",
-            "description": "backpack",
+            "description": "blue backpack",
             "anchor": "shelf",
             "position": "on the built-in wooden bench shelf in the alcove",
             "video_seconds": 13.0

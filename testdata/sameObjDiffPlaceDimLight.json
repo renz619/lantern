@@ -1,0 +1,68 @@
+{
+    "video": "sameObjDiffPlaceDimLight.MOV",
+    "items": [
+        {
+            "label": "glasses",
+            "description": "grey framed glasses",
+            "anchor": "desk",
+            "position": "on the desk, in front of the keyboard",
+            "video_seconds": 11.0
+        },
+        {
+            "label": "water bottle",
+            "description": "black water bottle",
+            "anchor": "desk",
+            "position": "on the desk, under the loft bed",
+            "video_seconds": 11.0
+        },
+        {
+            "label": "backpack",
+            "description": "blue backpack",
+            "anchor": "floor",
+            "position": "on the floor, leaning against the white tv stand",
+            "video_seconds": 16.0
+        },
+        {
+            "label": "water bottle",
+            "description": "black water bottle with white and grey lid",
+            "anchor": "table",
+            "position": "on the white tv stand",
+            "video_seconds": 19.0
+        },
+        {
+            "label": "key",
+            "description": "key with orange key chain",
+            "anchor": "couch",
+            "position": "on top of the grey couch",
+            "video_seconds": 21.0
+        },
+        {
+            "label": "water bottle",
+            "description": "black water bottle with black handle",
+            "anchor": "couch",
+            "position": "on the grey couch",
+            "video_seconds": 22.0
+        },
+        {
+            "label": "key",
+            "description": "key with blue key chain",
+            "anchor": "floor",
+            "position": "on top of grey cushion stool on the floor",
+            "video_seconds": 23.0
+        },
+        {
+            "label": "wallet",
+            "description": "white bank of america wallet",
+            "anchor": "chair",
+            "position": "on top of wooden chair",
+            "video_seconds": 26.0
+        },
+        {
+            "label": "phone",
+            "description": "black phone lying face up",
+            "anchor": "desk",
+            "position": "on the desk under the loft bed",
+            "video_seconds": 27.0
+        }
+    ]
+}

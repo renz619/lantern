@@ -25,8 +25,8 @@
         {
             "label": "hat",
             "description": "green baseball cap",
-            "anchor": "television",
-            "position": "hung over the top-left corner of the television",
+            "anchor": "table",
+            "position": "hung over the top-left corner of the television on the white TV stand",
             "video_seconds": 16.0
         },
         {

@@ -44,8 +44,15 @@
             "video_seconds": 18.5
         },
         {
-            "label": "wallet",
-            "description": "small red card holder or wallet",
+            "label": "debit card",
+            "description": "small red debit card",
+            "anchor": "table",
+            "position": "on the round white table next to a round coaster",
+            "video_seconds": 18.5
+        },
+        {
+            "label": "gift card",
+            "description": "small white gift card",
             "anchor": "table",
             "position": "on the round white table next to a round coaster",
             "video_seconds": 18.5
