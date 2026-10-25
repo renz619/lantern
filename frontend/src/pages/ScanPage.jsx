@@ -15,7 +15,8 @@ const MESSAGES = {
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
 export default function ScanPage({ goTo }) {
-  const inputRef = useRef(null)
+  const cameraRef = useRef(null) // opens the phone camera
+  const uploadRef = useRef(null) // opens saved videos
   const mounted = useRef(true)
   const [file, setFile] = useState(null)
   // 'idle' (nothing happening), 'uploading', 'analyzing', 'done' or 'error'
@@ -81,25 +82,23 @@ export default function ScanPage({ goTo }) {
 
   return (
     <>
-      <h1>Scan your room</h1>
+      <h1>{busy ? 'Scanning video' : 'Scan your room'}</h1>
       {phase === 'idle' && (
         <p className="lede">Film a slow spin around the room and we’ll remember where everything is.</p>
       )}
       {phase === 'idle' && <TipsCard />}
 
-      <input
-        type="file"
-        accept="video/*"
-        capture="environment"
-        ref={inputRef}
-        hidden
-        onChange={choose}
-      />
+      {/* On phones, capture opens the rear camera; without it the picker shows saved videos. */}
+      <input type="file" accept="video/*" capture="environment" ref={cameraRef} hidden onChange={choose} />
+      <input type="file" accept="video/*" ref={uploadRef} hidden onChange={choose} />
 
       {phase !== 'done' && !file && (
-        <button className="primary block" onClick={() => inputRef.current.click()}>
-          Record room video
-        </button>
+        <div className="actions">
+          <button className="primary" onClick={() => cameraRef.current.click()}>
+            Record a new video
+          </button>
+          <button onClick={() => uploadRef.current.click()}>Upload a saved video</button>
+        </div>
       )}
 
       {phase !== 'done' && file && (
@@ -115,7 +114,8 @@ export default function ScanPage({ goTo }) {
               <button className="primary" onClick={analyze}>
                 {phase === 'error' ? 'Retry' : 'Analyze'}
               </button>
-              <button onClick={() => inputRef.current.click()}>Choose a different video</button>
+              <button onClick={() => cameraRef.current.click()}>Record again</button>
+              <button onClick={() => uploadRef.current.click()}>Upload a different video</button>
             </div>
           )}
           {phase === 'error' && <p role="alert" className="warning">{error}</p>}
