@@ -10,6 +10,10 @@
   --danger: #b3261e;
   --success: #1b7a3d;
   --scrollbar: #c3c5ca;
+  --bar-bg: #bcd4ee;
+  --bar-text: #16181d;
+  --bar-text-dim: #3b4658;
+  --bar-border: #93b4d6;
   --radius: 6px;
   --nav-height: 64px;
 
@@ -20,7 +24,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #eceef2;
+    --text: #dfe1e6;
     --muted: #a6abb5;
     --bg: #111317;
     --card: #1a1d22;
@@ -31,6 +35,10 @@
     --danger: #ff8a80;
     --success: #5fcf86;
     --scrollbar: #3d424b;
+    --bar-bg: #172b43;
+    --bar-text: #dfe1e6;
+    --bar-text-dim: #aeb7c4;
+    --bar-border: #27415f;
   }
 }
 
@@ -93,8 +101,8 @@ input[type='search'] {
   bottom: 0;
   display: flex;
   justify-content: center;
-  background: var(--bg);
-  border-top: 1px solid var(--border);
+  background: var(--bar-bg);
+  border-top: 1px solid var(--bar-border);
 }
 
 .bottom-nav-inner {
@@ -109,13 +117,18 @@ input[type='search'] {
   border: 0;
   border-radius: 0;
   background: transparent;
-  color: var(--muted);
+  color: var(--bar-text-dim);
   font-weight: 600;
 }
 
 .bottom-nav button[aria-current='page'] {
-  color: var(--text);
-  box-shadow: inset 0 3px 0 var(--accent);
+  color: var(--bar-text);
+  box-shadow: inset 0 3px 0 var(--bar-text);
+}
+
+.bottom-nav button:hover:not(:disabled) {
+  transform: none;
+  color: var(--bar-text);
 }
 
 .card {
@@ -417,3 +430,29 @@ button:active:not(:disabled) {
 .item-list li:last-child {
   border-bottom: 0;
 }
+
+/* Title bar and bottom nav share one blue that goes dark with the system theme */
+.title-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding-top: env(safe-area-inset-top);
+  color: var(--bar-text);
+  background: var(--bar-bg);
+  border-bottom: 1px solid var(--bar-border);
+}
+
+.title-bar-inner {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 14px 16px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.app {
+  padding-top: 24px;
+}
+

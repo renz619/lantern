@@ -9,6 +9,9 @@ function App() {
 
   return (
     <>
+      <header className="title-bar">
+        <div className="title-bar-inner">Lantern</div>
+      </header>
       <main className="app">
         {tab === 'scan' && <ScanPage goTo={setTab} />}
         {tab === 'search' && <SearchPage goTo={setTab} />}
