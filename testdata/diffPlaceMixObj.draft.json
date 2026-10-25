@@ -1,0 +1,68 @@
+{
+    "video": "diffPlaceMixObj.MOV",
+    "items": [
+        {
+            "label": "water bottle",
+            "description": "black water bottle with loop lid",
+            "anchor": "table",
+            "position": "on the round white table near the window",
+            "video_seconds": 5.0
+        },
+        {
+            "label": "keys",
+            "description": "metal key on a blue strap keychain",
+            "anchor": "table",
+            "position": "on the round white table near the edge",
+            "video_seconds": 5.5
+        },
+        {
+            "label": "keys",
+            "description": "set of keys with keychain",
+            "anchor": "dresser",
+            "position": "on the top left surface of the wooden dresser",
+            "video_seconds": 9.5
+        },
+        {
+            "label": "water bottle",
+            "description": "tall black water bottle",
+            "anchor": "dresser",
+            "position": "on the top right surface of the wooden dresser",
+            "video_seconds": 10.5
+        },
+        {
+            "label": "phone",
+            "description": "black smartphone",
+            "anchor": "shelf",
+            "position": "on the wooden built-in shelf ledge",
+            "video_seconds": 13.0
+        },
+        {
+            "label": "pencil",
+            "description": "black pen or pencil with clip",
+            "anchor": "table",
+            "position": "on the round white table",
+            "video_seconds": 18.5
+        },
+        {
+            "label": "wallet",
+            "description": "small red card holder or wallet",
+            "anchor": "table",
+            "position": "on the round white table next to a round coaster",
+            "video_seconds": 18.5
+        },
+        {
+            "label": "airpods",
+            "description": "white wireless earbud case",
+            "anchor": "couch",
+            "position": "on the blue cushion of the couch",
+            "video_seconds": 20.0
+        },
+        {
+            "label": "bag",
+            "description": "blue tote bag with white Annapurna Labs logo",
+            "anchor": "couch",
+            "position": "on the couch cushion",
+            "video_seconds": 22.0
+        }
+    ]
+}

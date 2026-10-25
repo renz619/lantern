@@ -1,0 +1,103 @@
+{
+    "video": "diffObjDimLight.MOV",
+    "items": [
+        {
+            "label": "mouse",
+            "description": "black computer mouse",
+            "anchor": "desk",
+            "position": "on the mouse pad on the desk under the loft bed",
+            "video_seconds": 9.0
+        },
+        {
+            "label": "bag",
+            "description": "red paper shopping bag with white text",
+            "anchor": "desk",
+            "position": "on the desk under the loft bed",
+            "video_seconds": 10.0
+        },
+        {
+            "label": "backpack",
+            "description": "black backpack with a yellow strap accent",
+            "anchor": "floor",
+            "position": "on the floor leaning against a small utility cart",
+            "video_seconds": 14.0
+        },
+        {
+            "label": "charger",
+            "description": "black laptop power brick with attached cables",
+            "anchor": "floor",
+            "position": "on the carpet floor in front of the TV stand",
+            "video_seconds": 18.0
+        },
+        {
+            "label": "remote",
+            "description": "black remote control",
+            "anchor": "table",
+            "position": "on the white TV stand in front of the TV",
+            "video_seconds": 18.5
+        },
+        {
+            "label": "water bottle",
+            "description": "tall orange reusable water bottle",
+            "anchor": "table",
+            "position": "on the white TV stand to the right of the TV",
+            "video_seconds": 19.0
+        },
+        {
+            "label": "bag",
+            "description": "cream and blue canvas duffel bag",
+            "anchor": "floor",
+            "position": "on the carpet floor in front of the TV stand",
+            "video_seconds": 19.5
+        },
+        {
+            "label": "laptop",
+            "description": "closed silver HP laptop",
+            "anchor": "couch",
+            "position": "on the couch cushion",
+            "video_seconds": 22.5
+        },
+        {
+            "label": "water bottle",
+            "description": "black insulated water bottle with loop handle lid",
+            "anchor": "couch",
+            "position": "standing on the couch cushion next to the silver laptop",
+            "video_seconds": 24.5
+        },
+        {
+            "label": "umbrella",
+            "description": "compact umbrella with patterned canopy",
+            "anchor": "couch",
+            "position": "resting across the armrest and seat of the couch",
+            "video_seconds": 27.0
+        },
+        {
+            "label": "bag",
+            "description": "beige duffel bag with black straps",
+            "anchor": "couch",
+            "position": "on the storage ottoman next to the couch",
+            "video_seconds": 28.0
+        },
+        {
+            "label": "tablet",
+            "description": "black tablet or portable device",
+            "anchor": "chair",
+            "position": "on the seat of the wooden chair",
+            "video_seconds": 33.0
+        },
+        {
+            "label": "hat",
+            "description": "dark green baseball cap with embroidered lettering",
+            "anchor": "bed",
+            "position": "hanging from the corner post of the loft bed frame",
+            "video_seconds": 34.0
+        },
+        {
+            "label": "mug",
+            "description": "dark coffee mug",
+            "anchor": "desk",
+            "position": "on the desk under the loft bed",
+            "video_seconds": 36.0
+        }
+    ]
+}

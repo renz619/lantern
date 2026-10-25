@@ -1,0 +1,89 @@
+{
+    "video": "mixObjDimLight.MOV",
+    "items": [
+        {
+            "label": "water bottle",
+            "description": "black water bottle with handle cap",
+            "anchor": "desk",
+            "position": "on the desk under the loft bed",
+            "video_seconds": 8.0
+        },
+        {
+            "label": "bag",
+            "description": "red paper gift bag with 'Snag' printed on it",
+            "anchor": "desk",
+            "position": "on the desk under the loft bed",
+            "video_seconds": 8.0
+        },
+        {
+            "label": "notebook",
+            "description": "yellow notebook with a blue label",
+            "anchor": "floor",
+            "position": "on the grey shag rug in front of the TV stand",
+            "video_seconds": 16.5
+        },
+        {
+            "label": "wallet",
+            "description": "black bifold wallet",
+            "anchor": "couch",
+            "position": "on the grey couch cushion",
+            "video_seconds": 20.5
+        },
+        {
+            "label": "keys",
+            "description": "set of keys with red and white keychain",
+            "anchor": "couch",
+            "position": "on the grey couch next to the wallet",
+            "video_seconds": 20.5
+        },
+        {
+            "label": "airpods",
+            "description": "white AirPods charging case",
+            "anchor": "couch",
+            "position": "on the grey couch next to the keys",
+            "video_seconds": 20.5
+        },
+        {
+            "label": "water bottle",
+            "description": "tall orange water bottle",
+            "anchor": "floor",
+            "position": "on the floor near the mini fridge and stool",
+            "video_seconds": 22.0
+        },
+        {
+            "label": "bag",
+            "description": "white and blue duffel bag",
+            "anchor": "floor",
+            "position": "on the floor in front of the storage chest",
+            "video_seconds": 23.0
+        },
+        {
+            "label": "glasses",
+            "description": "pair of glasses with dark frames",
+            "anchor": "chest",
+            "position": "on top of the grey storage chest below the window",
+            "video_seconds": 23.5
+        },
+        {
+            "label": "umbrella",
+            "description": "black compact umbrella",
+            "anchor": "chair",
+            "position": "on the seat of the wooden chair",
+            "video_seconds": 26.5
+        },
+        {
+            "label": "bag",
+            "description": "blue reusable shopping bag",
+            "anchor": "floor",
+            "position": "on the floor behind the wooden chair",
+            "video_seconds": 28.0
+        },
+        {
+            "label": "backpack",
+            "description": "backpack",
+            "anchor": "floor",
+            "position": "on the floor against the base of the loft bed frame",
+            "video_seconds": 31.0
+        }
+    ]
+}

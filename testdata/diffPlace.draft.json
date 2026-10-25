@@ -1,0 +1,89 @@
+{
+    "video": "diffPlace.MOV",
+    "items": [
+        {
+            "label": "keys",
+            "description": "keys with a red strap tag",
+            "anchor": "window sill",
+            "position": "on the wooden window sill of the left window",
+            "video_seconds": 0.5
+        },
+        {
+            "label": "keys",
+            "description": "keys on a ring with a dark blue strap tag",
+            "anchor": "table",
+            "position": "on the edge of the round white table",
+            "video_seconds": 4.0
+        },
+        {
+            "label": "water bottle",
+            "description": "black reusable water bottle with loop cap",
+            "anchor": "table",
+            "position": "in the center of the round white table",
+            "video_seconds": 4.5
+        },
+        {
+            "label": "water bottle",
+            "description": "tall dark water bottle",
+            "anchor": "dresser",
+            "position": "on top of the wooden dresser to the right of the mirror",
+            "video_seconds": 10.0
+        },
+        {
+            "label": "backpack",
+            "description": "backpack",
+            "anchor": "shelf",
+            "position": "on the built-in wooden bench shelf in the alcove",
+            "video_seconds": 13.0
+        },
+        {
+            "label": "water bottle",
+            "description": "black water bottle",
+            "anchor": "shelf",
+            "position": "on the wooden bench shelf next to the navy backpack",
+            "video_seconds": 13.0
+        },
+        {
+            "label": "phone",
+            "description": "smartphone resting screen up",
+            "anchor": "couch",
+            "position": "on the blue seat cushion of the couch",
+            "video_seconds": 18.5
+        },
+        {
+            "label": "wallet",
+            "description": "black textured wallet",
+            "anchor": "table",
+            "position": "on the round white table near an ID card",
+            "video_seconds": 20.0
+        },
+        {
+            "label": "id card",
+            "description": "white plastic ID card",
+            "anchor": "table",
+            "position": "on the round white table next to the wallet",
+            "video_seconds": 20.0
+        },
+        {
+            "label": "pencil",
+            "description": "pen or mechanical pencil with red accent",
+            "anchor": "table",
+            "position": "on the round white table near the edge",
+            "video_seconds": 20.0
+        },
+        {
+            "label": "bag",
+            "description": "navy blue tote bag with white logo",
+            "anchor": "couch",
+            "position": "in the corner corner of the couch",
+            "video_seconds": 20.5
+        },
+        {
+            "label": "airpods",
+            "description": "white AirPods charging case",
+            "anchor": "couch",
+            "position": "on the blue seat cushion of the couch",
+            "video_seconds": 24.0
+        }
+    ]
+}
