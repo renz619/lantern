@@ -1,0 +1,98 @@
+[
+  {
+    "label": "bag",
+    "description": "red paper gift bag with 'Snag' printed in white",
+    "anchor": "desk",
+    "position": "on the desk under the loft bed",
+    "confidence": 0.95,
+    "video_seconds": 10.0
+  },
+  {
+    "label": "backpack",
+    "description": "black backpack standing upright",
+    "anchor": "floor",
+    "position": "on the floor between the rolling cart and the TV stand",
+    "confidence": 0.95,
+    "video_seconds": 15.0
+  },
+  {
+    "label": "charger",
+    "description": "black laptop power brick with attached cables",
+    "anchor": "floor",
+    "position": "on the grey rug in front of the TV stand",
+    "confidence": 0.9,
+    "video_seconds": 18.0
+  },
+  {
+    "label": "water bottle",
+    "description": "tall orange reusable water bottle",
+    "anchor": "tv stand",
+    "position": "on the shelf of the white TV stand next to the television",
+    "confidence": 0.95,
+    "video_seconds": 20.0
+  },
+  {
+    "label": "bag",
+    "description": "cream and blue duffel bag",
+    "anchor": "floor",
+    "position": "on the grey rug next to the TV stand",
+    "confidence": 0.9,
+    "video_seconds": 21.0
+  },
+  {
+    "label": "laptop",
+    "description": "closed silver HP laptop",
+    "anchor": "couch",
+    "position": "on the grey couch cushion",
+    "confidence": 0.95,
+    "video_seconds": 23.5
+  },
+  {
+    "label": "water bottle",
+    "description": "black water bottle with handle lid",
+    "anchor": "couch",
+    "position": "on the couch cushion beside the laptop",
+    "confidence": 0.95,
+    "video_seconds": 24.5
+  },
+  {
+    "label": "umbrella",
+    "description": "umbrella with a curved wooden handle",
+    "anchor": "couch",
+    "position": "resting on the armrest and cushion of the couch",
+    "confidence": 0.9,
+    "video_seconds": 27.0
+  },
+  {
+    "label": "tablet",
+    "description": "black tablet lying flat",
+    "anchor": "chair",
+    "position": "on the seat of the wooden chair",
+    "confidence": 0.85,
+    "video_seconds": 33.0
+  },
+  {
+    "label": "bag",
+    "description": "blue tote bag",
+    "anchor": "floor",
+    "position": "on the floor behind the wooden chair",
+    "confidence": 0.85,
+    "video_seconds": 33.5
+  },
+  {
+    "label": "hat",
+    "description": "green baseball cap",
+    "anchor": "bed",
+    "position": "hanging from the corner post of the loft bed frame",
+    "confidence": 0.95,
+    "video_seconds": 34.5
+  },
+  {
+    "label": "mug",
+    "description": "dark ceramic coffee mug",
+    "anchor": "desk",
+    "position": "on the desk underneath the loft bed",
+    "confidence": 0.9,
+    "video_seconds": 36.0
+  }
+]

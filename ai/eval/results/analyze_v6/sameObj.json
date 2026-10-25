@@ -1,0 +1,114 @@
+[
+  {
+    "label": "laptop",
+    "description": "black laptop",
+    "anchor": "desk",
+    "position": "on the desk under the loft bed, next to the monitor",
+    "confidence": 0.95,
+    "video_seconds": 7.0
+  },
+  {
+    "label": "tablet",
+    "description": "black tablet in a case with a charging cable plugged in",
+    "anchor": "desk",
+    "position": "on the front edge of the desk under the loft bed",
+    "confidence": 0.95,
+    "video_seconds": 7.5
+  },
+  {
+    "label": "airpods",
+    "description": "white earbud case",
+    "anchor": "desk",
+    "position": "on the desk to the right of the laptop",
+    "confidence": 0.85,
+    "video_seconds": 7.5
+  },
+  {
+    "label": "keys",
+    "description": "key ring with metal keys and fob",
+    "anchor": "desk",
+    "position": "on the desk, to the right of the keyboard",
+    "confidence": 0.95,
+    "video_seconds": 8.0
+  },
+  {
+    "label": "bag",
+    "description": "red and white Snag paper shopping bag",
+    "anchor": "desk",
+    "position": "on the right side of the desk under the loft bed",
+    "confidence": 0.95,
+    "video_seconds": 8.0
+  },
+  {
+    "label": "backpack",
+    "description": "backpack",
+    "anchor": "floor",
+    "position": "on the rug in front of the TV stand",
+    "confidence": 0.95,
+    "video_seconds": 11.5
+  },
+  {
+    "label": "glasses",
+    "description": "eyeglasses with dark frames",
+    "anchor": "tv stand",
+    "position": "on the right side of the TV stand top, next to the TV base",
+    "confidence": 0.9,
+    "video_seconds": 13.0
+  },
+  {
+    "label": "phone",
+    "description": "black smartphone lying flat",
+    "anchor": "couch",
+    "position": "on the seat cushion of the grey couch",
+    "confidence": 0.95,
+    "video_seconds": 15.0
+  },
+  {
+    "label": "wallet",
+    "description": "white card holder with a red stripe",
+    "anchor": "couch",
+    "position": "on the grey couch cushion, behind the phone",
+    "confidence": 0.95,
+    "video_seconds": 16.0
+  },
+  {
+    "label": "bag",
+    "description": "blue drawstring bag with white lettering",
+    "anchor": "stool",
+    "position": "on top of the black round stool",
+    "confidence": 0.9,
+    "video_seconds": 16.5
+  },
+  {
+    "label": "bag",
+    "description": "cream and blue canvas tote bag",
+    "anchor": "floor",
+    "position": "on the floor between the couch and the storage chest",
+    "confidence": 0.85,
+    "video_seconds": 18.0
+  },
+  {
+    "label": "water bottle",
+    "description": "black cylindrical water bottle",
+    "anchor": "chair",
+    "position": "standing on the seat of the wooden chair",
+    "confidence": 0.95,
+    "video_seconds": 19.5
+  },
+  {
+    "label": "bag",
+    "description": "blue reusable tote bag",
+    "anchor": "desk",
+    "position": "on the desk behind the wooden chair",
+    "confidence": 0.9,
+    "video_seconds": 20.0
+  },
+  {
+    "label": "bag",
+    "description": "red and white Snag paper shopping bag",
+    "anchor": "desk",
+    "position": "on the desk under the second bunk bed",
+    "confidence": 0.95,
+    "video_seconds": 21.5
+  }
+]

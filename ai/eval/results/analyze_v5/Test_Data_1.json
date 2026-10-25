@@ -1,0 +1,114 @@
+[
+  {
+    "label": "wallet",
+    "description": "white and red Bank of America card holder",
+    "anchor": "desk",
+    "position": "on the desk in front of the keyboard and PC tower",
+    "confidence": 0.88,
+    "video_seconds": 6.8
+  },
+  {
+    "label": "keys",
+    "description": "keychain with metal keys and a brown leather strap",
+    "anchor": "desk",
+    "position": "on the desk to the left of the keyboard",
+    "confidence": 0.95,
+    "video_seconds": 8.5
+  },
+  {
+    "label": "water bottle",
+    "description": "black insulated water bottle with spout lid",
+    "anchor": "desk",
+    "position": "standing on the desk next to the phone",
+    "confidence": 0.95,
+    "video_seconds": 9.8
+  },
+  {
+    "label": "phone",
+    "description": "phone",
+    "anchor": "desk",
+    "position": "on the desk in front of the computer monitor and keyboard",
+    "confidence": 0.96,
+    "video_seconds": 11.2
+  },
+  {
+    "label": "keys",
+    "description": "metal keys on a ring with a white tag",
+    "anchor": "desk",
+    "position": "on top of the PC tower",
+    "confidence": 0.85,
+    "video_seconds": 13.5
+  },
+  {
+    "label": "backpack",
+    "description": "backpack",
+    "anchor": "chair",
+    "position": "resting on the seat of the office chair",
+    "confidence": 0.98,
+    "video_seconds": 15.2
+  },
+  {
+    "label": "water bottle",
+    "description": "black water bottle with flip-top carry handle",
+    "anchor": "desk",
+    "position": "standing on top of the PC tower",
+    "confidence": 0.95,
+    "video_seconds": 21.6
+  },
+  {
+    "label": "charger",
+    "description": "grey charging cable plugged into the front port of the PC tower",
+    "anchor": "desk",
+    "position": "plugged into the PC tower and extending across the desk",
+    "confidence": 0.88,
+    "video_seconds": 22.3
+  },
+  {
+    "label": "pen",
+    "description": "ballpoint pen with red clip and plug",
+    "anchor": "desk",
+    "position": "on the desk in front of the PC tower",
+    "confidence": 0.92,
+    "video_seconds": 23.4
+  },
+  {
+    "label": "bag",
+    "description": "blue canvas tote bag with Annapurna Labs logo",
+    "anchor": "desk",
+    "position": "on the desk in front of the red partition divider",
+    "confidence": 0.96,
+    "video_seconds": 26.5
+  },
+  {
+    "label": "wallet",
+    "description": "brown patterned leather bifold wallet",
+    "anchor": "desk",
+    "position": "on the desk directly in front of the blue tote bag",
+    "confidence": 0.95,
+    "video_seconds": 27.2
+  },
+  {
+    "label": "keys",
+    "description": "keys on a light blue patterned lanyard strap",
+    "anchor": "desk",
+    "position": "on the desk between the smartphone and wallet",
+    "confidence": 0.93,
+    "video_seconds": 27.6
+  },
+  {
+    "label": "phone",
+    "description": "black smartphone with magnetic ring case",
+    "anchor": "desk",
+    "position": "on the desk to the left of the lanyard and keys",
+    "confidence": 0.96,
+    "video_seconds": 28.0
+  },
+  {
+    "label": "water bottle",
+    "description": "black water bottle with stickers",
+    "anchor": "desk",
+    "position": "standing on the desk next to the PC tower",
+    "confidence": 0.94,
+    "video_seconds": 28.7
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "label": "laptop",
+    "description": "open black laptop",
+    "anchor": "desk",
+    "position": "open on the desk behind the keyboard",
+    "confidence": 0.9,
+    "video_seconds": 10.0
+  },
+  {
+    "label": "tablet",
+    "description": "flat black digital tablet with a white cable plugged into it",
+    "anchor": "desk",
+    "position": "on the front edge of the desk",
+    "confidence": 0.85,
+    "video_seconds": 10.5
+  },
+  {
+    "label": "glasses",
+    "description": "pair of eyeglasses folded on the desk",
+    "anchor": "desk",
+    "position": "on the desk between the tablet and the water bottle",
+    "confidence": 0.9,
+    "video_seconds": 10.5
+  },
+  {
+    "label": "water bottle",
+    "description": "tall black water bottle",
+    "anchor": "desk",
+    "position": "on the desk next to the red bag",
+    "confidence": 0.95,
+    "video_seconds": 11.0
+  },
+  {
+    "label": "bag",
+    "description": "red Snag paper shopping bag",
+    "anchor": "desk",
+    "position": "on the desk to the right of the water bottle",
+    "confidence": 0.95,
+    "video_seconds": 11.0
+  },
+  {
+    "label": "backpack",
+    "description": "backpack",
+    "anchor": "floor",
+    "position": "resting on the rug in front of the TV stand",
+    "confidence": 0.95,
+    "video_seconds": 16.5
+  },
+  {
+    "label": "keys",
+    "description": "set of keys with a strap lanyard",
+    "anchor": "couch",
+    "position": "on the dark couch cushion",
+    "confidence": 0.9,
+    "video_seconds": 20.0
+  },
+  {
+    "label": "phone",
+    "description": "black smartphone",
+    "anchor": "chair",
+    "position": "on the seat of the wooden chair",
+    "confidence": 0.9,
+    "video_seconds": 26.5
+  },
+  {
+    "label": "phone",
+    "description": "dark smartphone",
+    "anchor": "desk",
+    "position": "on the desk surface under the second loft bed",
+    "confidence": 0.9,
+    "video_seconds": 28.0
+  },
+  {
+    "label": "bag",
+    "description": "red Snag paper shopping bag",
+    "anchor": "desk",
+    "position": "on the desk under the second loft bed",
+    "confidence": 0.95,
+    "video_seconds": 29.5
+  }
+]

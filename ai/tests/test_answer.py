@@ -75,10 +75,16 @@ def test_description_words_find_the_right_item():
 
 
 def test_different_labels_ask_which_kind():
-    items = [item("wallet", "card holder", "on the desk"), item("id card", "student id", "on the shelf", anchor="shelf")]
+    items = [item("wallet", "card holder", "on the desk"), item("gift card", "store gift card", "on the shelf", anchor="shelf")]
     result = answer_question(items, "card")
     assert result["status"] == "ambiguous"
-    assert "wallet" in result["question"] and "id card" in result["question"]
+    assert "wallet" in result["question"] and "gift card" in result["question"]
+
+
+def test_id_and_bank_cards_are_found_as_a_wallet():
+    items = [item("id card", "student id", "on the couch cushion", anchor="couch")]
+    assert answer_question(items, "where is my wallet")["status"] == "found"
+    assert answer_question([item("wallet", "black wallet", "on the desk")], "debit card")["status"] == "found"
 
 
 def test_not_found_and_empty_query():

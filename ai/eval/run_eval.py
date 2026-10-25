@@ -13,6 +13,7 @@ a day, so use --cache while tuning how answers are scored.
 import json
 import os
 import sys
+import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -20,6 +21,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from analyze import analyze_video, normalize_label  # noqa: E402
 
 TIME_TOLERANCE = 3.0
+PAUSE_BETWEEN_VIDEOS = 20  # seconds
 # With PROMPT_VERSION set, answers are saved per version (results/analyze_v5/...)
 # so runs of different prompts can be compared without overwriting each other.
 CACHE_DIR = Path(__file__).parent / "results" / os.getenv("PROMPT_VERSION", "")
@@ -57,7 +59,9 @@ def get_found(video, use_cache):
     if use_cache:
         if not cache_file.exists():
             return None
-        return json.loads(cache_file.read_text(encoding="utf-8"))
+        found = json.loads(cache_file.read_text(encoding="utf-8"))
+        # Saved answers may predate a vocabulary change; apply today's label standard.
+        return [{**item, "label": normalize_label(item["label"])} for item in found]
     found = analyze_video(video)
     cache_file.write_text(json.dumps(found, indent=2), encoding="utf-8")
     return found
@@ -90,7 +94,11 @@ def find_pairs(folder, only=None):
     for sheet in sorted(Path(folder).glob("*.json")):
         if only and sheet.stem not in only:
             continue
-        data = json.loads(sheet.read_text(encoding="utf-8"))
+        try:
+            data = json.loads(sheet.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as error:
+            print(f"skipping {sheet.name}: not valid JSON (line {error.lineno}: {error.msg})")
+            continue
         video = Path(folder) / data["video"]
         if video.exists():
             yield video, sheet
@@ -101,6 +109,8 @@ def find_pairs(folder, only=None):
 def run_all(folder, use_cache, only=None):
     found = missed = false_alarms = skipped = 0
     for video, sheet in find_pairs(folder, only):
+        if not use_cache and found + missed:
+            time.sleep(PAUSE_BETWEEN_VIDEOS)  # stay under Gemini's tokens-per-minute limit
         try:
             result = score_video(video, sheet, use_cache)
         except Exception as error:  # one bad video shouldn't stop the batch

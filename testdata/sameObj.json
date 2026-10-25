@@ -16,13 +16,6 @@
             "video_seconds": 7.0
         },
         {
-            "label": "airpods",
-            "description": "white airpods",
-            "anchor": "desk",
-            "position": "on the desk, in front of the keyboard under the loft bed",
-            "video_seconds": 8.0
-        },
-        {
             "label": "keys",
             "description": "multicolored keys with a UT orange decoration and a car key sticking out to the left",
             "anchor": "desk",
@@ -40,8 +33,8 @@
             "label": "water bottle",
             "description": "black Owala water bottle",
             "anchor": "cart",
-            "position": "on a black utility cart on the floor next to the white tv stand",
-            "video_seconds": 10.0 
+            "position": "on the top storage caddy of the black utility cart on the floor next to the white tv stand",
+            "video_seconds": 10.0
         },
         {
             "label": "backpack",
@@ -53,13 +46,6 @@
         {
             "label": "glasses",
             "description": "grey framed glasses",
-            "anchor": "tv stand",
-            "position": "on the white tv stand",
-            "video_seconds": 14.0
-        },
-        {
-            "label": "keys",
-            "description": "key with blue key chain",
             "anchor": "tv stand",
             "position": "on the white tv stand",
             "video_seconds": 14.0
@@ -91,6 +77,13 @@
             "anchor": "chair",
             "position": "on top of wooden chair",
             "video_seconds": 20.0
+        },
+        {
+            "label": "bag",
+            "description": "blue resuable bag",
+            "anchor": "floor",
+            "position": "on the floor behidn the wooden chair under the loft bed",
+            "video_seconds": 17.0
         }
     ]
 }

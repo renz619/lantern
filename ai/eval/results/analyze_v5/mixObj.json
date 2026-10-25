@@ -1,0 +1,98 @@
+[
+  {
+    "label": "bag",
+    "description": "red paper gift bag with 'Snag Snag' pattern",
+    "anchor": "desk",
+    "position": "on the desk under the loft bed",
+    "confidence": 0.95,
+    "video_seconds": 8.0
+  },
+  {
+    "label": "water bottle",
+    "description": "tall black reusable water bottle with loop lid",
+    "anchor": "desk",
+    "position": "on the desk under the loft bed, next to the red gift bag",
+    "confidence": 0.95,
+    "video_seconds": 8.0
+  },
+  {
+    "label": "game controller",
+    "description": "blue and dark patterned game controller",
+    "anchor": "tv stand",
+    "position": "on the top surface of the tv stand in front of the TV",
+    "confidence": 0.9,
+    "video_seconds": 15.0
+  },
+  {
+    "label": "wallet",
+    "description": "black leather bifold wallet",
+    "anchor": "couch",
+    "position": "on the grey couch cushion",
+    "confidence": 0.98,
+    "video_seconds": 20.0
+  },
+  {
+    "label": "keys",
+    "description": "keyring with keys, car fob, and orange lanyard tag",
+    "anchor": "couch",
+    "position": "on the grey couch cushion beside the wallet",
+    "confidence": 0.98,
+    "video_seconds": 20.0
+  },
+  {
+    "label": "airpods",
+    "description": "white AirPods charging case",
+    "anchor": "couch",
+    "position": "on the grey couch cushion near the keys",
+    "confidence": 0.95,
+    "video_seconds": 20.0
+  },
+  {
+    "label": "water bottle",
+    "description": "tall orange reusable water bottle",
+    "anchor": "floor",
+    "position": "on a box on the floor beside the black round stool and mini-fridge",
+    "confidence": 0.9,
+    "video_seconds": 22.0
+  },
+  {
+    "label": "bag",
+    "description": "white and navy duffel bag",
+    "anchor": "floor",
+    "position": "on the floor beside the stool and window bench",
+    "confidence": 0.9,
+    "video_seconds": 23.5
+  },
+  {
+    "label": "umbrella",
+    "description": "folded black compact umbrella with yellow strap",
+    "anchor": "chair",
+    "position": "on the wooden chair seat",
+    "confidence": 0.95,
+    "video_seconds": 26.0
+  },
+  {
+    "label": "bag",
+    "description": "blue plastic tote bag",
+    "anchor": "floor",
+    "position": "on the floor between the chair and the second loft desk",
+    "confidence": 0.9,
+    "video_seconds": 27.5
+  },
+  {
+    "label": "bag",
+    "description": "red paper gift bag with 'Snag Snag' pattern",
+    "anchor": "desk",
+    "position": "on the desk surface under the second loft bed",
+    "confidence": 0.95,
+    "video_seconds": 30.0
+  },
+  {
+    "label": "backpack",
+    "description": "backpack",
+    "anchor": "floor",
+    "position": "on the floor leaning against the loft bed frame",
+    "confidence": 0.95,
+    "video_seconds": 31.0
+  }
+]

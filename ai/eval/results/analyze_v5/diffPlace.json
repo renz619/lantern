@@ -1,0 +1,98 @@
+[
+  {
+    "label": "keys",
+    "description": "set of keys with a red strap tag",
+    "anchor": "window sill",
+    "position": "on the left window sill",
+    "confidence": 0.85,
+    "video_seconds": 0.5
+  },
+  {
+    "label": "keys",
+    "description": "metal key with a navy strap lanyard",
+    "anchor": "table",
+    "position": "on the round white table near the edge",
+    "confidence": 0.95,
+    "video_seconds": 4.0
+  },
+  {
+    "label": "water bottle",
+    "description": "black water bottle with handle lid",
+    "anchor": "table",
+    "position": "in the center of the round white table",
+    "confidence": 0.95,
+    "video_seconds": 4.5
+  },
+  {
+    "label": "water bottle",
+    "description": "tall dark grey or black bottle",
+    "anchor": "dresser",
+    "position": "on the right side on top of the tall wooden dresser",
+    "confidence": 0.9,
+    "video_seconds": 10.0
+  },
+  {
+    "label": "backpack",
+    "description": "backpack",
+    "anchor": "shelf",
+    "position": "sitting in the recessed wooden nook shelf",
+    "confidence": 0.95,
+    "video_seconds": 12.5
+  },
+  {
+    "label": "water bottle",
+    "description": "black water bottle",
+    "anchor": "shelf",
+    "position": "on the recessed wooden shelf next to the backpack",
+    "confidence": 0.9,
+    "video_seconds": 13.0
+  },
+  {
+    "label": "phone",
+    "description": "blue smartphone",
+    "anchor": "couch",
+    "position": "on the blue seat cushion of the couch",
+    "confidence": 0.95,
+    "video_seconds": 18.5
+  },
+  {
+    "label": "wallet",
+    "description": "black wallet or card holder",
+    "anchor": "table",
+    "position": "on the round white table",
+    "confidence": 0.9,
+    "video_seconds": 19.5
+  },
+  {
+    "label": "id card",
+    "description": "white identification card",
+    "anchor": "table",
+    "position": "on the round white table next to the wallet",
+    "confidence": 0.9,
+    "video_seconds": 19.5
+  },
+  {
+    "label": "pencil",
+    "description": "black and red writing pen or pencil",
+    "anchor": "table",
+    "position": "on the round white table near the edge",
+    "confidence": 0.9,
+    "video_seconds": 19.5
+  },
+  {
+    "label": "bag",
+    "description": "navy blue tote bag with white text",
+    "anchor": "couch",
+    "position": "in the corner on the couch seat cushion",
+    "confidence": 0.9,
+    "video_seconds": 20.5
+  },
+  {
+    "label": "airpods",
+    "description": "white wireless earbud charging case",
+    "anchor": "couch",
+    "position": "on the couch cushion below the bulletin board",
+    "confidence": 0.95,
+    "video_seconds": 24.0
+  }
+]

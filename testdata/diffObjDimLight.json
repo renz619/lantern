@@ -2,13 +2,6 @@
     "video": "diffObjDimLight.MOV",
     "items": [
         {
-            "label": "mouse",
-            "description": "black computer mouse",
-            "anchor": "desk",
-            "position": "on the desk under the loft bed",
-            "video_seconds": 9.0
-        },
-        {
             "label": "laptop",
             "description": "black laptop with stickers",
             "anchor": "desk",
@@ -30,13 +23,6 @@
             "video_seconds": 14.0
         },
         {
-            "label": "umbrella",
-            "description": "black compact umbrella with a wooden handle",
-            "anchor": "floor",
-            "position": "on the floor leaning against a the black backpack",
-            "video_seconds": 14.0
-        },
-        {
             "label": "charger",
             "description": "black laptop power brick with attached cables",
             "anchor": "floor",
@@ -47,14 +33,14 @@
             "label": "remote",
             "description": "black remote control",
             "anchor": "table",
-            "position": "on the white TV stand in front of the TV",
+            "position": "on the white TV stand in front of the TV next to the pencil and orange water bottle",
             "video_seconds": 18.5
         },
         {
             "label": "pencil",
             "description": "green mechanical pencil",
             "anchor": "table",
-            "position": "on the white TV stand to the right of the TV",
+            "position": "on the white TV stand to the right of the TV between the tv remote and orange water bottle",
             "video_seconds": 19.0
         },
         {
@@ -89,7 +75,7 @@
             "label": "notebook",
             "description": "yellow notebook",
             "anchor": "stool",
-            "position": "resting on black cushion stool",
+            "position": "resting on black cushion stool on the floor in front of fridge",
             "video_seconds": 26.0
         },
         {
@@ -101,7 +87,7 @@
         },
         {
             "label": "bag",
-            "description": "beige duffel bag with black straps",
+            "description": "cream and blue canvas duffel bag",
             "anchor": "couch",
             "position": "on the storage ottoman next to the couch",
             "video_seconds": 28.0

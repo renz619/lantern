@@ -2,6 +2,13 @@
     "video": "diffObjDiffPlace.MOV",
     "items": [
         {
+            "label": "laptop",
+            "description": "black laptop",
+            "anchor": "desk",
+            "position": "on the desk under the loft bed, behind the keyboard",
+            "video_seconds": 8.0
+        },
+        {
             "label": "water bottle",
             "description": "tall black reusable water bottle",
             "anchor": "desk",
@@ -40,7 +47,7 @@
             "label": "umbrella",
             "description": "black and blue pattern umbrella with brown wooden handle",
             "anchor": "tv stand",
-            "position": "on the grey shag rug on the TV stand",
+            "position": "on the white TV stand under the tv",
             "video_seconds": 17.0
         },
         {

@@ -1,0 +1,66 @@
+[
+  {
+    "label": "laptop",
+    "description": "black laptop open on desk",
+    "anchor": "desk",
+    "position": "on the desk under the loft bed, next to the keyboard",
+    "confidence": 0.85,
+    "video_seconds": 6.8
+  },
+  {
+    "label": "tablet",
+    "description": "black tablet lying flat on desk extension",
+    "anchor": "desk",
+    "position": "on the lower desk surface next to the small desk fan",
+    "confidence": 0.8,
+    "video_seconds": 7.3
+  },
+  {
+    "label": "bag",
+    "description": "red and white Snag paper shopping bag",
+    "anchor": "desk",
+    "position": "on the right side of the desk surface",
+    "confidence": 0.95,
+    "video_seconds": 7.5
+  },
+  {
+    "label": "keys",
+    "description": "set of keys with lanyard or keychain",
+    "anchor": "desk",
+    "position": "on the desk surface in front of the red shopping bag",
+    "confidence": 0.75,
+    "video_seconds": 7.8
+  },
+  {
+    "label": "backpack",
+    "description": "backpack",
+    "anchor": "floor",
+    "position": "leaning against the white TV stand on the rug",
+    "confidence": 0.95,
+    "video_seconds": 11.2
+  },
+  {
+    "label": "water bottle",
+    "description": "dark reusable water bottle with blue lid",
+    "anchor": "dresser",
+    "position": "on top of the tall wooden dresser alcove",
+    "confidence": 0.8,
+    "video_seconds": 15.5
+  },
+  {
+    "label": "bag",
+    "description": "blue and white tote bag",
+    "anchor": "floor",
+    "position": "on the floor near the plastic storage bin by the window",
+    "confidence": 0.8,
+    "video_seconds": 21.0
+  },
+  {
+    "label": "water bottle",
+    "description": "black water bottle with handle cap",
+    "anchor": "floor",
+    "position": "standing on the floor next to the wooden desk chair",
+    "confidence": 0.85,
+    "video_seconds": 22.8
+  }
+]

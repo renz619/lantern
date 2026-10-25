@@ -1,0 +1,114 @@
+[
+  {
+    "label": "bag",
+    "description": "red Snag paper gift bag",
+    "anchor": "desk",
+    "position": "on the desk under the loft bed",
+    "confidence": 0.95,
+    "video_seconds": 10.0
+  },
+  {
+    "label": "water bottle",
+    "description": "black reusable water bottle",
+    "anchor": "desk",
+    "position": "on the desk next to the red gift bag",
+    "confidence": 0.95,
+    "video_seconds": 10.0
+  },
+  {
+    "label": "lighter",
+    "description": "blue disposable lighter",
+    "anchor": "desk",
+    "position": "on the pull-out tray of the desk",
+    "confidence": 0.85,
+    "video_seconds": 10.5
+  },
+  {
+    "label": "notebook",
+    "description": "yellow notebook with blue binding",
+    "anchor": "floor",
+    "position": "on the grey carpet in front of the TV stand",
+    "confidence": 0.9,
+    "video_seconds": 18.5
+  },
+  {
+    "label": "wallet",
+    "description": "black leather bifold wallet",
+    "anchor": "couch",
+    "position": "on the couch cushion",
+    "confidence": 0.95,
+    "video_seconds": 22.0
+  },
+  {
+    "label": "keys",
+    "description": "keychain with keys and fobs",
+    "anchor": "couch",
+    "position": "on the couch cushion beside the wallet",
+    "confidence": 0.95,
+    "video_seconds": 22.0
+  },
+  {
+    "label": "airpods",
+    "description": "white AirPods charging case",
+    "anchor": "couch",
+    "position": "on the couch cushion next to the keys",
+    "confidence": 0.95,
+    "video_seconds": 22.0
+  },
+  {
+    "label": "water bottle",
+    "description": "orange reusable water bottle with black cap",
+    "anchor": "floor",
+    "position": "on the floor between the mini fridge and the stool",
+    "confidence": 0.9,
+    "video_seconds": 23.5
+  },
+  {
+    "label": "bag",
+    "description": "white and blue duffel bag",
+    "anchor": "floor",
+    "position": "on the floor beside the stool",
+    "confidence": 0.85,
+    "video_seconds": 24.5
+  },
+  {
+    "label": "backpack",
+    "description": "black backpack",
+    "anchor": "bench",
+    "position": "on top of the storage chest under the window AC unit",
+    "confidence": 0.85,
+    "video_seconds": 25.0
+  },
+  {
+    "label": "sunglasses",
+    "description": "black sunglasses",
+    "anchor": "chair",
+    "position": "on the seat of the wooden chair",
+    "confidence": 0.85,
+    "video_seconds": 27.5
+  },
+  {
+    "label": "bag",
+    "description": "blue tote bag",
+    "anchor": "floor",
+    "position": "on the floor under the desk",
+    "confidence": 0.85,
+    "video_seconds": 28.5
+  },
+  {
+    "label": "bag",
+    "description": "red Snag paper gift bag",
+    "anchor": "desk",
+    "position": "on the desk under the second loft bed",
+    "confidence": 0.9,
+    "video_seconds": 30.5
+  },
+  {
+    "label": "backpack",
+    "description": "backpack",
+    "anchor": "floor",
+    "position": "on the floor leaning against the loft bed frame",
+    "confidence": 0.95,
+    "video_seconds": 32.0
+  }
+]

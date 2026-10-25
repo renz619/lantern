@@ -1,0 +1,106 @@
+[
+  {
+    "label": "tablet",
+    "description": "black tablet in a case connected to a white charging cable",
+    "anchor": "desk",
+    "position": "on the front pull-out ledge of the desk",
+    "confidence": 0.95,
+    "video_seconds": 7.5
+  },
+  {
+    "label": "laptop",
+    "description": "black laptop open on the desk surface",
+    "anchor": "desk",
+    "position": "on the desk underneath the loft bed, behind the black fan",
+    "confidence": 0.95,
+    "video_seconds": 7.5
+  },
+  {
+    "label": "keys",
+    "description": "keychain with metal keys",
+    "anchor": "desk",
+    "position": "on the desk surface to the right of the tablet",
+    "confidence": 0.95,
+    "video_seconds": 8.0
+  },
+  {
+    "label": "bag",
+    "description": "red and white paper shopping bag with 'Snag' printed on it",
+    "anchor": "desk",
+    "position": "on the right side of the desk",
+    "confidence": 0.95,
+    "video_seconds": 8.0
+  },
+  {
+    "label": "backpack",
+    "description": "backpack",
+    "anchor": "floor",
+    "position": "on the carpet directly in front of the TV stand",
+    "confidence": 0.98,
+    "video_seconds": 11.5
+  },
+  {
+    "label": "glasses",
+    "description": "pair of eyeglasses",
+    "anchor": "tv stand",
+    "position": "on top of the white TV stand to the right of the television",
+    "confidence": 0.9,
+    "video_seconds": 13.0
+  },
+  {
+    "label": "phone",
+    "description": "black smartphone lying flat",
+    "anchor": "couch",
+    "position": "on the gray couch cushion",
+    "confidence": 0.98,
+    "video_seconds": 15.0
+  },
+  {
+    "label": "id card",
+    "description": "white card with red accents",
+    "anchor": "couch",
+    "position": "on the couch cushion behind the phone",
+    "confidence": 0.85,
+    "video_seconds": 16.0
+  },
+  {
+    "label": "bag",
+    "description": "blue tote bag",
+    "anchor": "stool",
+    "position": "on the round black stool near the mini fridge",
+    "confidence": 0.9,
+    "video_seconds": 16.5
+  },
+  {
+    "label": "backpack",
+    "description": "black backpack",
+    "anchor": "bench",
+    "position": "on top of the gray storage trunk under the window",
+    "confidence": 0.85,
+    "video_seconds": 17.5
+  },
+  {
+    "label": "water bottle",
+    "description": "tall black water bottle",
+    "anchor": "chair",
+    "position": "standing upright on the wooden chair seat",
+    "confidence": 0.95,
+    "video_seconds": 19.5
+  },
+  {
+    "label": "bag",
+    "description": "bright blue shopping tote bag",
+    "anchor": "desk",
+    "position": "on the desk surface behind the wooden chair",
+    "confidence": 0.9,
+    "video_seconds": 19.5
+  },
+  {
+    "label": "bag",
+    "description": "red and white paper gift bag with 'Snag' printed on it",
+    "anchor": "desk",
+    "position": "on the desk under the second loft bed",
+    "confidence": 0.95,
+    "video_seconds": 21.5
+  }
+]

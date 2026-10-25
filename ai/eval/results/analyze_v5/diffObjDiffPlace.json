@@ -1,0 +1,170 @@
+[
+  {
+    "label": "laptop",
+    "description": "black laptop open on the desk beneath the loft bed",
+    "anchor": "desk",
+    "position": "on the desk surface behind the keyboard under the loft bed",
+    "confidence": 0.85,
+    "video_seconds": 7.5
+  },
+  {
+    "label": "pencil",
+    "description": "pens and pencils lying horizontally on the desk surface",
+    "anchor": "desk",
+    "position": "on the desk under the loft bed, behind the keyboard",
+    "confidence": 0.8,
+    "video_seconds": 8.0
+  },
+  {
+    "label": "tablet",
+    "description": "black flat drawing tablet or digital tablet",
+    "anchor": "desk",
+    "position": "on the slide-out wooden keyboard tray of the desk",
+    "confidence": 0.85,
+    "video_seconds": 8.5
+  },
+  {
+    "label": "water bottle",
+    "description": "tall black insulated water bottle",
+    "anchor": "desk",
+    "position": "on the desk surface to the right of the keyboard tray",
+    "confidence": 0.95,
+    "video_seconds": 9.0
+  },
+  {
+    "label": "bag",
+    "description": "red Snag paper shopping bag",
+    "anchor": "desk",
+    "position": "on the right side of the desk under the loft bed",
+    "confidence": 0.95,
+    "video_seconds": 9.0
+  },
+  {
+    "label": "hat",
+    "description": "olive green baseball cap",
+    "anchor": "tv stand",
+    "position": "hanging on the upper-left corner of the television on the TV stand",
+    "confidence": 0.9,
+    "video_seconds": 16.0
+  },
+  {
+    "label": "laptop",
+    "description": "closed silver laptop",
+    "anchor": "floor",
+    "position": "lying flat on the grey shag rug in front of the TV stand",
+    "confidence": 0.95,
+    "video_seconds": 16.5
+  },
+  {
+    "label": "backpack",
+    "description": "black backpack",
+    "anchor": "floor",
+    "position": "standing on the floor against the right side of the TV stand",
+    "confidence": 0.95,
+    "video_seconds": 18.0
+  },
+  {
+    "label": "remote",
+    "description": "black Roku remote control with purple navigational buttons",
+    "anchor": "couch",
+    "position": "resting on the grey couch cushion",
+    "confidence": 0.95,
+    "video_seconds": 21.0
+  },
+  {
+    "label": "remote",
+    "description": "black rectangular television remote control",
+    "anchor": "couch",
+    "position": "resting on the grey couch cushion next to the Roku remote",
+    "confidence": 0.95,
+    "video_seconds": 21.0
+  },
+  {
+    "label": "water bottle",
+    "description": "orange insulated water bottle with black cap",
+    "anchor": "couch",
+    "position": "standing upright against the armrest cushion of the grey couch",
+    "confidence": 0.95,
+    "video_seconds": 21.5
+  },
+  {
+    "label": "charger",
+    "description": "black power adapter brick with power cords",
+    "anchor": "couch",
+    "position": "lying on the seat cushion of the grey couch",
+    "confidence": 0.9,
+    "video_seconds": 22.0
+  },
+  {
+    "label": "laptop",
+    "description": "open laptop with circular and NGNX stickers on the lid",
+    "anchor": "couch",
+    "position": "resting upright on the grey couch cushion",
+    "confidence": 0.95,
+    "video_seconds": 22.5
+  },
+  {
+    "label": "bag",
+    "description": "cream and blue duffel bag",
+    "anchor": "stool",
+    "position": "sitting on top of the black round stool behind the couch",
+    "confidence": 0.9,
+    "video_seconds": 23.5
+  },
+  {
+    "label": "bag",
+    "description": "cream canvas tote bag with shoulder straps",
+    "anchor": "floor",
+    "position": "on the floor next to the black round stool",
+    "confidence": 0.9,
+    "video_seconds": 24.0
+  },
+  {
+    "label": "backpack",
+    "description": "black backpack",
+    "anchor": "floor",
+    "position": "on top of the grey storage chest below the window",
+    "confidence": 0.85,
+    "video_seconds": 24.5
+  },
+  {
+    "label": "bag",
+    "description": "large blue reusable shopping bag",
+    "anchor": "chair",
+    "position": "behind the wooden chair leaning against the desk frame",
+    "confidence": 0.9,
+    "video_seconds": 27.0
+  },
+  {
+    "label": "umbrella",
+    "description": "compact black folded umbrella",
+    "anchor": "chair",
+    "position": "resting on the seat of the wooden chair",
+    "confidence": 0.95,
+    "video_seconds": 27.5
+  },
+  {
+    "label": "mouse",
+    "description": "white wireless computer mouse",
+    "anchor": "chair",
+    "position": "sitting on the seat of the wooden chair beside the umbrella",
+    "confidence": 0.9,
+    "video_seconds": 27.5
+  },
+  {
+    "label": "notebook",
+    "description": "yellow paper folder or notebook",
+    "anchor": "desk",
+    "position": "on the corner of the wooden desk next to the chair",
+    "confidence": 0.85,
+    "video_seconds": 27.5
+  },
+  {
+    "label": "bag",
+    "description": "red Snag shopping bag",
+    "anchor": "desk",
+    "position": "on the shelf of the second loft bed desk",
+    "confidence": 0.95,
+    "video_seconds": 30.0
+  }
+]

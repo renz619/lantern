@@ -68,14 +68,14 @@
             "label": "charger",
             "description": "black power strip with power cord",
             "anchor": "couch",
-            "position": "resting on the couch cushion next to the remotes",
+            "position": "resting on the couch between the remotes and the laptop",
             "video_seconds": 23.0
         },
         {
             "label": "laptop",
             "description": "black laptop with stickers",
             "anchor": "couch",
-            "position": "resting on the couch cushion next to the remotes",
+            "position": "resting on the couch arm rest next to the charger/power strip",
             "video_seconds": 24
         },
         {
@@ -97,14 +97,14 @@
             "description": "black compact umbrella with brown wooden handle",
             "anchor": "chair",
             "position": "sitting on the wooden chair next to the mouse",
-            "video_seconds": 28
+            "video_seconds": 29
         },
         {
             "label": "mouse",
             "description": "white mouse",
             "anchor": "chair",
             "position": "sitting on the wooden chair next to the umbrella",
-            "video_seconds": 28
+            "video_seconds": 29
         },
         {
             "label": "bag",

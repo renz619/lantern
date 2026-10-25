@@ -1,0 +1,154 @@
+[
+  {
+    "label": "tablet",
+    "description": "black flat drawing tablet",
+    "anchor": "desk",
+    "position": "on the pullout tray of the desk",
+    "confidence": 0.85,
+    "video_seconds": 8.5
+  },
+  {
+    "label": "water bottle",
+    "description": "tall black reusable water bottle with loop handle cap",
+    "anchor": "desk",
+    "position": "on the desk surface under the loft bed",
+    "confidence": 0.95,
+    "video_seconds": 9.0
+  },
+  {
+    "label": "bag",
+    "description": "red paper gift bag with white lettering",
+    "anchor": "desk",
+    "position": "on the desk under the loft bed, behind the water bottle",
+    "confidence": 0.95,
+    "video_seconds": 10.0
+  },
+  {
+    "label": "hat",
+    "description": "green baseball cap",
+    "anchor": "tv stand",
+    "position": "hanging over the top-left corner of the television screen",
+    "confidence": 0.95,
+    "video_seconds": 16.0
+  },
+  {
+    "label": "laptop",
+    "description": "silver laptop closed flat",
+    "anchor": "floor",
+    "position": "on the gray rug in front of the tv stand",
+    "confidence": 0.98,
+    "video_seconds": 16.5
+  },
+  {
+    "label": "game controller",
+    "description": "camo pattern video game controller",
+    "anchor": "tv stand",
+    "position": "on the surface of the tv stand in front of the TV",
+    "confidence": 0.85,
+    "video_seconds": 17.5
+  },
+  {
+    "label": "backpack",
+    "description": "black backpack standing upright",
+    "anchor": "floor",
+    "position": "on the rug beside the tv stand",
+    "confidence": 0.95,
+    "video_seconds": 18.0
+  },
+  {
+    "label": "remote",
+    "description": "black streaming remote with purple directional pad",
+    "anchor": "couch",
+    "position": "on the couch cushion",
+    "confidence": 0.95,
+    "video_seconds": 21.0
+  },
+  {
+    "label": "remote",
+    "description": "black rectangular remote control",
+    "anchor": "couch",
+    "position": "on the couch cushion beside the streaming remote",
+    "confidence": 0.95,
+    "video_seconds": 21.0
+  },
+  {
+    "label": "water bottle",
+    "description": "orange insulated bottle with black lid and loop",
+    "anchor": "couch",
+    "position": "resting on the arm of the couch",
+    "confidence": 0.95,
+    "video_seconds": 21.5
+  },
+  {
+    "label": "laptop",
+    "description": "laptop propped open with stickers on the back lid",
+    "anchor": "couch",
+    "position": "propped against the back cushions of the couch",
+    "confidence": 0.95,
+    "video_seconds": 22.0
+  },
+  {
+    "label": "charger",
+    "description": "black power brick with attached charging cable",
+    "anchor": "couch",
+    "position": "on the couch cushion next to the laptop",
+    "confidence": 0.95,
+    "video_seconds": 22.5
+  },
+  {
+    "label": "bag",
+    "description": "cream canvas duffel bag with blue handles",
+    "anchor": "stool",
+    "position": "on the black stool behind the couch",
+    "confidence": 0.9,
+    "video_seconds": 23.5
+  },
+  {
+    "label": "backpack",
+    "description": "black backpack sitting on the storage bench",
+    "anchor": "bench",
+    "position": "on top of the gray storage bench below the window",
+    "confidence": 0.85,
+    "video_seconds": 24.5
+  },
+  {
+    "label": "umbrella",
+    "description": "black compact folding umbrella",
+    "anchor": "chair",
+    "position": "on the seat of the wooden chair",
+    "confidence": 0.95,
+    "video_seconds": 27.0
+  },
+  {
+    "label": "mouse",
+    "description": "white wireless computer mouse",
+    "anchor": "chair",
+    "position": "on the wooden chair seat next to the umbrella",
+    "confidence": 0.9,
+    "video_seconds": 27.0
+  },
+  {
+    "label": "notebook",
+    "description": "yellow spiral notebook or folder",
+    "anchor": "desk",
+    "position": "on the second desk under the bunk bed",
+    "confidence": 0.8,
+    "video_seconds": 27.0
+  },
+  {
+    "label": "bag",
+    "description": "blue reusable tote bag",
+    "anchor": "floor",
+    "position": "on the floor between the chair and the second desk",
+    "confidence": 0.9,
+    "video_seconds": 27.5
+  },
+  {
+    "label": "bag",
+    "description": "red gift bag with white text",
+    "anchor": "desk",
+    "position": "on the shelf of the second bunk bed desk",
+    "confidence": 0.95,
+    "video_seconds": 30.0
+  }
+]
