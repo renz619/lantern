@@ -1,7 +1,9 @@
 import os
+from pathlib import Path
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 from app.routers import changes, find, scans
 
@@ -25,6 +27,13 @@ def get_cors_origins() -> list[str]:
     ]
 
 
+def get_frontend_dir() -> Path | None:
+    """Return the built frontend folder if it exists (run `npm run build` in frontend/)."""
+    configured = os.getenv("LANTERN_FRONTEND_DIST")
+    folder = Path(configured) if configured else Path(__file__).resolve().parents[2] / "frontend" / "dist"
+    return folder if (folder / "index.html").is_file() else None
+
+
 def create_app() -> FastAPI:
     application = FastAPI(title="Lantern API")
     application.add_middleware(
@@ -41,6 +50,13 @@ def create_app() -> FastAPI:
     @application.get("/health")
     def health() -> dict[str, str]:
         return {"status": "ok"}
+
+    # Serve the built website from the same address as the API, so one tunnel is
+    # enough and the browser never makes a cross-origin call. Mounted last so the
+    # API routes above always win.
+    frontend_dir = get_frontend_dir()
+    if frontend_dir:
+        application.mount("/", StaticFiles(directory=frontend_dir, html=True), name="frontend")
 
     return application
 

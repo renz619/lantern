@@ -1,0 +1,15 @@
+.git
+.env
+.env.*
+**/node_modules
+frontend/dist
+frontend/.env*
+**/__pycache__
+**/.venv
+testdata
+docs
+ai
+*.mp4
+*.mov
+*.webm
+*.mkv

@@ -3,7 +3,9 @@ import { mockScans, mockScanDetail, mockFind, mockChanges } from './mocks'
 
 const params = new URLSearchParams(window.location.search)
 const USE_MOCKS = import.meta.env.VITE_USE_MOCKS === 'true' || params.get('mock') === '1'
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+// In a production build the backend serves this site, so the API is on the same
+// address (an empty base). `npm run dev` talks to the backend on port 8000.
+const BASE_URL = import.meta.env.VITE_API_URL ?? (import.meta.env.PROD ? '' : 'http://localhost:8000')
 
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
