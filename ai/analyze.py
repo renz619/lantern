@@ -43,6 +43,27 @@ ALIASES = {
     "card wallet": "wallet", "billfold": "wallet",
 }
 
+# The furniture an item can sit on. One fixed list, so the same spot gets the same
+# word every scan and diff_scans does not report a move when only the wording changed.
+ANCHORS = [
+    "desk", "floor", "couch", "chair", "table", "shelf", "dresser", "bed",
+    "nightstand", "tv stand", "window sill", "stool",
+]
+
+# Variants Gemini might use -> our one standard anchor.
+ANCHOR_ALIASES = {
+    "television": "tv stand", "tv": "tv stand", "tv console": "tv stand",
+    "sofa": "couch", "loveseat": "couch",
+    "armchair": "chair", "desk chair": "chair", "office chair": "chair",
+    "bedside table": "nightstand", "night stand": "nightstand",
+    "end table": "table", "coffee table": "table", "side table": "table",
+    "windowsill": "window sill", "window ledge": "window sill",
+    "bookshelf": "shelf", "bookcase": "shelf",
+    "chest of drawers": "dresser", "wardrobe": "dresser", "cabinet": "dresser",
+    "carpet": "floor", "rug": "floor", "ground": "floor",
+    "computer desk": "desk", "workstation": "desk", "bunk bed": "bed",
+}
+
 # Words that must never appear in a saved description or position (privacy).
 PRIVACY_PATTERN = re.compile(
     r"\b(face|person|people|man|woman|boy|girl|wearing|worn|wears|hair|skin|his|her|head)\b"
@@ -63,6 +84,12 @@ def normalize_label(label):
     return ALIASES.get(label, label)
 
 
+def normalize_anchor(anchor):
+    """Map a furniture word to our standard anchor. Unknown words are kept, not dropped."""
+    anchor = anchor.strip().lower()
+    return ANCHOR_ALIASES.get(anchor, anchor)
+
+
 def clean_text(text):
     """Blank out any text that mentions a person, so faces never get stored."""
     if PRIVACY_PATTERN.search(text.lower()):
@@ -78,12 +105,13 @@ def clean_items(items, watchlist=None, cutoff=CONFIDENCE_CUTOFF):
         label = normalize_label(item["label"])
         if label not in allowed or item["confidence"] < cutoff:
             continue
+        anchor = normalize_anchor(item["anchor"])
         description = clean_text(item["description"]) or label
-        position = clean_text(item["position"]) or f"near the {item['anchor']}"
+        position = clean_text(item["position"]) or f"near the {anchor}"
         cleaned.append({
             "label": label,
             "description": description,
-            "anchor": item["anchor"].strip().lower(),
+            "anchor": anchor,
             "position": position,
             "confidence": round(float(item["confidence"]), 2),
             "video_seconds": round(float(item["video_seconds"]), 1),
@@ -94,6 +122,7 @@ def clean_items(items, watchlist=None, cutoff=CONFIDENCE_CUTOFF):
 def build_prompt(watchlist=None):
     text = PROMPT_FILE.read_text(encoding="utf-8")
     text = text.replace("{allowlist}", ", ".join(ALLOWLIST))
+    text = text.replace("{anchors}", ", ".join(ANCHORS))
     return text.replace("{watchlist}", ", ".join(watchlist) if watchlist else "none")
 
 

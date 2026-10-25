@@ -5,7 +5,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "eval"))
 
-from analyze import analyze_video, build_prompt, clean_items, normalize_label  # noqa: E402
+from analyze import ANCHORS, analyze_video, build_prompt, clean_items, normalize_anchor, normalize_label  # noqa: E402
 from run_eval import match_items  # noqa: E402
 
 
@@ -66,3 +66,25 @@ def test_match_items_scores_found_missed_false_alarms():
     assert len(matched) == 1
     assert [m["label"] for m in missed] == ["airpods", "wallet"]
     assert [f["label"] for f in false_alarms] == ["wallet", "laptop"]
+
+
+def test_anchor_synonyms_become_one_anchor():
+    assert normalize_anchor("Television") == "tv stand"
+    assert normalize_anchor(" Sofa ") == "couch"
+    assert normalize_anchor("bookshelf") == "shelf"
+    assert normalize_anchor("desk") == "desk"
+
+
+def test_unknown_anchor_is_kept():
+    assert normalize_anchor("Window Seat") == "window seat"
+
+
+def test_clean_items_standardizes_the_anchor():
+    cleaned = clean_items([item("keys", 1, anchor="Television")])
+    assert cleaned[0]["anchor"] == "tv stand"
+
+
+def test_prompt_lists_the_standard_anchors():
+    prompt = build_prompt()
+    assert "{anchors}" not in prompt
+    assert all(anchor in prompt for anchor in ANCHORS)
