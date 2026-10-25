@@ -2,6 +2,13 @@
     "video": "sameObjDiffPlace.MOV",
     "items": [
         {
+            "label": "tablet",
+            "description": "black tablet",
+            "anchor": "desk",
+            "position": "on the desk, under the loft bed in front of the fan",
+            "video_seconds": 10.0
+        },
+        {
             "label": "glasses",
             "description": "grey framed glasses",
             "anchor": "desk",
@@ -14,6 +21,13 @@
             "anchor": "desk",
             "position": "on the desk, under the loft bed",
             "video_seconds": 10.0
+        },
+        {
+            "label": "bag",
+            "description": "red paper bag with the words 'Snag' on it",
+            "anchor": "desk",
+            "position": "on the desk under the loft bed",
+            "video_seconds": 10.5
         },
         {
             "label": "backpack",
@@ -30,7 +44,7 @@
             "video_seconds": 16.0
         },
         {
-            "label": "key",
+            "label": "keys",
             "description": "key with orange key chain",
             "anchor": "couch",
             "position": "on top of the grey couch",
@@ -41,18 +55,18 @@
             "description": "black water bottle with black handle",
             "anchor": "couch",
             "position": "on the grey couch",
-            "video_seconds": 18.0
+            "video_seconds": 19.0
         },
         {
-            "label": "key",
+            "label": "keys",
             "description": "key with blue key chain",
             "anchor": "floor",
             "position": "on top of grey cushion stool on the floor",
-            "video_seconds": 21.0
+            "video_seconds": 19.0
         },
         {
             "label": "wallet",
-            "description": "white bank of america wallet",
+            "description": "white bank of america wallet that is holding cards",
             "anchor": "chair",
             "position": "on top of wooden chair",
             "video_seconds": 24.0
@@ -63,6 +77,13 @@
             "anchor": "desk",
             "position": "on the desk under the loft bed",
             "video_seconds": 24.0
+        },
+        {
+            "label": "bag",
+            "description": "red paper bag with the words 'Snag' on it",
+            "anchor": "desk",
+            "position": "on the desk under the loft bed",
+            "video_seconds": 26.5
         }
     ]
 }

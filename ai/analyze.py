@@ -21,7 +21,7 @@ ALLOWLIST = [
     "laptop", "tablet", "book", "pencil", "pen", "notebook", "watch",
     "mouse", "camera", "umbrella", "hat", "id card", "power bank",
     "usb drive", "calculator", "earbud case", "mug", "credit card", "debit card",
-    "gift card"
+    "gift card", "notebook"
 ]
 
 # Variants Gemini might use -> our one standard name.
@@ -38,15 +38,16 @@ ALIASES = {
     "mechanical pencil": "pencil", "pen": "pen", "ballpoint pen": "pen",
     "rucksack": "backpack", "pc mouse": "mouse", "computer mouse": "mouse",
     "tv remote": "remote", "remote control": "remote",
-    "computer": "laptop", "notebook computer": "laptop",
+    "computer": "laptop",
     "card holder": "wallet", "cardholder": "wallet", "card sleeve": "wallet",
     "card wallet": "wallet", "billfold": "wallet",
+    "notebook": "notebook", "spiral notebook": "notebook", "composition notebook": "notebook",
 }
 
 # The furniture an item can sit on. One fixed list, so the same spot gets the same
 # word every scan and diff_scans does not report a move when only the wording changed.
 ANCHORS = [
-    "desk", "floor", "couch", "chair", "table", "shelf", "dresser", "bed",
+    "desk", "floor", "couch", "chair", "table", "shelf", "dresser", "bed", "cart",
     "nightstand", "tv stand", "window sill", "stool",
 ]
 

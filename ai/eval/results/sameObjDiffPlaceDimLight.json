@@ -1,0 +1,74 @@
+[
+  {
+    "label": "laptop",
+    "description": "dark laptop open on the desk behind the keyboard",
+    "anchor": "desk",
+    "position": "on the desk under the lofted bed, behind the external keyboard",
+    "confidence": 0.85,
+    "video_seconds": 10.0
+  },
+  {
+    "label": "tablet",
+    "description": "black digital tablet lying flat with a cable connected",
+    "anchor": "desk",
+    "position": "on the front edge of the desk, in front of the fan",
+    "confidence": 0.8,
+    "video_seconds": 10.5
+  },
+  {
+    "label": "cable",
+    "description": "white charging cable plugged into the tablet",
+    "anchor": "desk",
+    "position": "plugged into the tablet on the front edge of the desk",
+    "confidence": 0.8,
+    "video_seconds": 10.5
+  },
+  {
+    "label": "glasses",
+    "description": "pair of eyeglasses with dark frames",
+    "anchor": "desk",
+    "position": "on the desk surface between the tablet and the water bottle",
+    "confidence": 0.9,
+    "video_seconds": 11.0
+  },
+  {
+    "label": "water bottle",
+    "description": "tall black reusable water bottle",
+    "anchor": "desk",
+    "position": "on the right side of the desk next to the chair",
+    "confidence": 0.95,
+    "video_seconds": 11.5
+  },
+  {
+    "label": "bag",
+    "description": "red and white Snag paper shopping bag",
+    "anchor": "desk",
+    "position": "on the right rear corner of the desk",
+    "confidence": 0.85,
+    "video_seconds": 11.5
+  },
+  {
+    "label": "backpack",
+    "description": "backpack",
+    "anchor": "floor",
+    "position": "on the carpeted floor leaning against the front of the white TV stand",
+    "confidence": 0.95,
+    "video_seconds": 16.0
+  },
+  {
+    "label": "keys",
+    "description": "set of keys with metal rings and a dark fob/strap",
+    "anchor": "couch",
+    "position": "on the front edge of the grey couch cushion",
+    "confidence": 0.95,
+    "video_seconds": 20.0
+  },
+  {
+    "label": "phone",
+    "description": "phone",
+    "anchor": "desk",
+    "position": "on the desk surface under the second loft bed",
+    "confidence": 0.9,
+    "video_seconds": 27.5
+  }
+]

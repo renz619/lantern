@@ -1,0 +1,58 @@
+[
+  {
+    "label": "laptop",
+    "description": "black laptop",
+    "anchor": "desk",
+    "position": "on the desk under the loft bed behind the keyboard",
+    "confidence": 0.85,
+    "video_seconds": 6.5
+  },
+  {
+    "label": "keys",
+    "description": "set of keys with keyring and keychain",
+    "anchor": "desk",
+    "position": "on the desk surface next to the red paper bag",
+    "confidence": 0.85,
+    "video_seconds": 7.5
+  },
+  {
+    "label": "bag",
+    "description": "red paper gift bag with 'Snag' printed on it",
+    "anchor": "desk",
+    "position": "on the desk under the loft bed",
+    "confidence": 0.9,
+    "video_seconds": 7.5
+  },
+  {
+    "label": "backpack",
+    "description": "backpack",
+    "anchor": "floor",
+    "position": "on the rug in front of the white TV stand",
+    "confidence": 0.95,
+    "video_seconds": 11.5
+  },
+  {
+    "label": "water bottle",
+    "description": "tall dark water bottle",
+    "anchor": "dresser",
+    "position": "on top of the tall wooden dresser in the alcove",
+    "confidence": 0.85,
+    "video_seconds": 15.5
+  },
+  {
+    "label": "bag",
+    "description": "blue and white tote bag",
+    "anchor": "floor",
+    "position": "on the floor between the wooden chair and storage bin",
+    "confidence": 0.85,
+    "video_seconds": 21.5
+  },
+  {
+    "label": "water bottle",
+    "description": "black water bottle",
+    "anchor": "chair",
+    "position": "standing on the seat of the wooden desk chair",
+    "confidence": 0.95,
+    "video_seconds": 23.5
+  }
+]
