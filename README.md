@@ -19,7 +19,18 @@ Needs Python 3.11+, Node 20+, and ffmpeg.
 4. Start the server: `uvicorn app.main:app --reload`.
 5. Check it: open `http://localhost:8000/health`.
 6. Frontend: `cd frontend`, `npm install`, `npm run dev`.
-7. Open the URL Vite prints. To use it from a phone, open an HTTPS tunnel to the backend and frontend.
+7. Open the URL Vite prints.
+
+### Use it on a phone (one tunnel)
+
+The backend serves the built website, so one HTTPS tunnel is enough and CORS doesn't matter.
+
+1. Build the site for the real backend. In PowerShell: `cd frontend; $env:VITE_USE_MOCKS='false'; $env:VITE_API_URL=''; npm run build`.
+2. Start the backend: `cd backend; uvicorn app.main:app`.
+3. Tunnel it: `cloudflared tunnel --url http://localhost:8000` (or `ngrok http 8000`).
+4. Open the `https://...` address it prints on your phone.
+
+Rebuild (step 1) after any frontend change. For mock data, build without the two `$env` lines changed (`VITE_USE_MOCKS='true'`).
 8. Optional: `python backend/scripts/seed_demo.py` fills the database with sample data for the demo.
 
 > Steps 3-4 and 8 depend on files B has not added yet. B: keep this list under 10 steps as the backend lands.

@@ -1,0 +1,10 @@
+# Render Blueprint: one free web service that serves the site and the API.
+services:
+  - type: web
+    name: lantern
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false # paste it in the Render dashboard; never commit it
