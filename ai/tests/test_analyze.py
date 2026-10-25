@@ -15,10 +15,13 @@ def item(label, seconds, confidence=0.9, description="x", position="on the desk"
 
 
 def test_aliases_become_one_label():
-    assert normalize_label("Earbuds") == "airpods"
+    assert normalize_label("Earbuds") == "earbuds"
+    assert normalize_label("earphones") == "earbuds"
+    assert normalize_label("Air Pods") == "airpods"
     assert normalize_label("bottle") == "water bottle"
     assert normalize_label("Mechanical Pencil") == "pencil"
-    assert normalize_label("pen") == "pencil"
+    assert normalize_label("pen") == "pen"
+    assert normalize_label("Ballpoint Pen") == "pen"
 
 
 def test_low_confidence_dropped():
