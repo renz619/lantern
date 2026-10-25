@@ -134,7 +134,7 @@ export default function ScanPage({ goTo }) {
             ))}
           </ul>
           <div className="actions">
-            <button className="primary" onClick={() => goTo('search')}>Search for something</button>
+            <button className="primary" onClick={() => goTo('search')}>Search for an item</button>
             <button onClick={reset}>Scan again</button>
           </div>
         </>

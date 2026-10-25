@@ -64,7 +64,7 @@ export default function HistoryPage({ goTo }) {
         <h1>Your history</h1>
         <section className="card">
           <p>No scans yet. Film your room and we’ll start remembering where your things are.</p>
-          <button className="primary" onClick={() => goTo('scan')}>Go to Scan</button>
+          <button className="primary" onClick={() => goTo('scan')}>Scan your room</button>
         </section>
       </>
     )

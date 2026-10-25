@@ -112,9 +112,10 @@ export default function SearchPage({ goTo }) {
       <p className="lede">Type it, say it, or tap a quick pick below.</p>
 
       <form className="search-form" onSubmit={submit}>
+        <label className="field-label" htmlFor="item-query">Item to find</label>
         <input
+          id="item-query"
           type="search"
-          aria-label="Item to find"
           placeholder="Try “keys” or “wallet”"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
@@ -162,7 +163,7 @@ export default function SearchPage({ goTo }) {
       {state === 'notfound' && (
         <section className="card">
           <p>We haven’t seen that yet. Try scanning your room again, and make sure it’s in view.</p>
-          <button className="primary" onClick={() => goTo('scan')}>Go to Scan</button>
+          <button className="primary" onClick={() => goTo('scan')}>Scan your room</button>
         </section>
       )}
 
