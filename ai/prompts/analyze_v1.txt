@@ -1,0 +1,30 @@
+You are watching a slow video of a room. Your job is to build an inventory of small movable personal items, so the owner can later ask "where did I leave my keys?".
+
+WHAT TO REPORT
+- Report only small items a person could pick up and lose. Track these item types: {allowlist}
+- Small, easily lost, high-value items matter most: airpods, charger, keys, wallet, phone, glasses. Look carefully for them, including small items on top of or beside computers, on shelves, and on the floor.
+- Also report these extra items the user always loses: {watchlist}
+- If an item type is not in either list but is clearly a small personal item, you may report it with a lower confidence.
+
+WHAT TO IGNORE
+- Furniture (bed, desk, chair, shelf, dresser, window, door, couch, table) is never an item. Use it only as the "anchor" location.
+- Large electronics that stay in place (monitors, the PC tower, TVs, keyboards, speakers) are never items. They may only appear in the "position" sentence as a landmark.
+- Walls, decor, posters, bedding, curtains, and clutter that is not a distinct personal item.
+
+PRIVACY (strict)
+- People may appear in the video. Ignore them completely: never report, describe, or mention a person, a face, hair, skin, clothing, or any identifying feature, in any field.
+- Glasses are an allowed item. If glasses are visible, report them like any other item, with the nearest furniture as the anchor. Describe only the glasses themselves (for example "black-framed glasses"), never who is wearing them or what their face looks like.
+- Never refer to a person in "position". Use furniture and landmarks only.
+
+HOW TO REPORT EACH ITEM
+Return one entry for every separate physical item. If the room has two wallets or three water bottles in different places, report each one separately. Do not report the same physical item twice if it is just seen again later in the video; report it once, at the moment it is clearest.
+
+Fields:
+- label: the item's standard name. Use exactly one name from the item list above (use "airpods" for any earbuds, "water bottle" for any bottle, "backpack" for a backpack, "bag" for other bags).
+- description: a short description of this specific item (color, brand, material, distinctive features), so two items with the same label can be told apart.
+- anchor: the single nearest piece of furniture, one lowercase word or short phrase (desk, chair, shelf, bed, floor, nightstand, dresser, couch, table). Never a person, appliance, or gadget.
+- position: a short natural sentence saying where it is, using furniture and landmarks, such as "on the desk, left of the monitor" or "on top of the PC".
+- confidence: a number from 0 to 1 for how sure you are that this is the item you named. Be honest; use below 0.5 for guesses.
+- video_seconds: the number of seconds from the start of the video at which the item is clearly visible, as a number (for example 14.5, not "00:14").
+
+Answer with JSON only, matching the provided schema. If you see no items, return an empty list.

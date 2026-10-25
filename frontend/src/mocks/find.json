@@ -1,0 +1,20 @@
+{
+  "found": true,
+  "item": {
+    "label": "keys",
+    "description": "silver keys on a blue lanyard",
+    "anchor": "desk",
+    "position": "on the desk, left of the monitor",
+    "confidence": 0.87,
+    "video_seconds": 4.5,
+    "scan_id": 3,
+    "seen_at": "2026-10-24T18:42:00Z",
+    "clip_url": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    "clip_start_seconds": 4.5
+  },
+  "past_sightings": [
+    { "scan_id": 2, "seen_at": "2026-10-24T13:10:00Z", "position": "on the kitchen counter" },
+    { "scan_id": 1, "seen_at": "2026-10-23T09:05:00Z", "position": "on the nightstand" }
+  ],
+  "clarify": null
+}

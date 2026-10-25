@@ -1,0 +1,13 @@
+{
+  "from_scan": 2,
+  "to_scan": 3,
+  "moved": [
+    { "label": "keys", "from_position": "on the kitchen counter", "to_position": "on the desk, left of the monitor" }
+  ],
+  "missing": [
+    { "label": "bottle", "last_position": "on the dresser" }
+  ],
+  "new": [
+    { "label": "headphones", "position": "on the nightstand, below the lamp" }
+  ]
+}
