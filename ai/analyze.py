@@ -18,9 +18,10 @@ CONFIDENCE_CUTOFF = 0.5
 ALLOWLIST = [
     "keys", "wallet", "phone", "airpods", "headphones", "charger", "cable",
     "glasses", "sunglasses", "water bottle", "remote", "backpack", "bag",
-    "laptop", "tablet", "book", "pencil", "notebook", "watch",
+    "laptop", "tablet", "book", "pencil", "pen", "notebook", "watch",
     "mouse", "camera", "umbrella", "hat", "id card", "power bank",
-    "usb drive", "calculator", "earbud case", "mug",
+    "usb drive", "calculator", "earbud case", "mug", "credit card", "debit card",
+    "gift card"
 ]
 
 # Variants Gemini might use -> our one standard name.
@@ -34,7 +35,7 @@ ALIASES = {
     "phone charger": "charger", "charging cable": "charger", "usb cable": "cable",
     "power adapter": "charger", "laptop charger": "charger",
     "purse": "bag", "handbag": "bag", "tote": "bag", "tote bag": "bag",
-    "mechanical pencil": "pencil", "pen": "pencil", "ballpoint pen": "pencil",
+    "mechanical pencil": "pencil", "pen": "pencil", "ballpoint pen": "pen",
     "rucksack": "backpack", "pc mouse": "mouse", "computer mouse": "mouse",
     "tv remote": "remote", "remote control": "remote",
     "computer": "laptop", "notebook computer": "laptop",
