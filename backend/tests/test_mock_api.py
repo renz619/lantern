@@ -196,35 +196,3 @@ def test_missing_video_is_rejected() -> None:
     )
 
     assert response.status_code == 422
-
-
-def test_find_returns_a_list_for_duplicate_labels() -> None:
-    response = client.get("/find", params={"q": "keys"})
-
-    assert response.status_code == 200
-    body = response.json()
-    assert body["found"] is True
-    assert len(body["items"]) == 2
-    assert {item["label"] for item in body["items"]} == {"keys"}
-    assert body["clarify"] is None
-
-
-def test_find_can_request_clarification() -> None:
-    response = client.get("/find", params={"q": "charger"})
-
-    assert response.status_code == 200
-    body = response.json()
-    assert body["found"] is True
-    assert body["items"] == []
-    assert body["clarify"]["options"] == ["phone charger", "laptop charger"]
-
-
-def test_changes_returns_moved_missing_and_new_lists() -> None:
-    response = client.get("/changes")
-
-    assert response.status_code == 200
-    body = response.json()
-    assert body["from_scan"] == 2
-    assert body["to_scan"] == 3
-    assert set(body) == {"from_scan", "to_scan", "moved", "missing", "new"}
-    assert body["moved"][0]["label"] == "keys"

@@ -3,6 +3,7 @@
 analyze_video(path, watchlist) is the function handed to the backend (B).
 Set GEMINI_MOCK=1 to get canned items without calling Gemini.
 """
+import json
 import os
 import re
 import time
@@ -15,55 +16,16 @@ MODEL = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
 PROMPT_FILE = Path(__file__).parent / "prompts" / f"{os.getenv('PROMPT_VERSION', 'analyze_v2')}.txt"
 CONFIDENCE_CUTOFF = 0.5
 
-ALLOWLIST = [
-    "keys", "wallet", "phone", "airpods", "earbuds", "headphones", "charger", "cable",
-    "glasses", "sunglasses", "water bottle", "remote", "backpack", "bag",
-    "laptop", "tablet", "book", "pencil", "pen", "notebook", "watch",
-    "mouse", "camera", "umbrella", "hat", "id card", "power bank",
-    "usb drive", "calculator", "earbud case", "mug", "credit card", "debit card",
-    "gift card", "notebook"
-]
-
-# Variants Gemini might use -> our one standard name.
-ALIASES = {
-    "key": "keys", "key chain": "keys", "keychain": "keys", "car key": "keys",
-    "air pods": "airpods", "airpod": "airpods", "earbuds": "earbuds",
-    "earbud": "earbuds", "earphones": "earbuds", "earbud case": "earbuds",
-    "bottle": "water bottle", "water-bottle": "water bottle", "flask": "water bottle",
-    "cell phone": "phone", "smartphone": "phone", "iphone": "phone",
-    "eyeglasses": "glasses", "spectacles": "glasses",
-    "phone charger": "charger", "charging cable": "charger", "usb cable": "cable",
-    "power adapter": "charger", "laptop charger": "charger",
-    "purse": "bag", "handbag": "bag", "tote": "bag", "tote bag": "bag",
-    "mechanical pencil": "pencil", "pen": "pen", "ballpoint pen": "pen",
-    "rucksack": "backpack", "pc mouse": "mouse", "computer mouse": "mouse",
-    "tv remote": "remote", "remote control": "remote",
-    "computer": "laptop",
-    "card holder": "wallet", "cardholder": "wallet", "card sleeve": "wallet",
-    "card wallet": "wallet", "billfold": "wallet",
-    "notebook": "notebook", "spiral notebook": "notebook", "composition notebook": "notebook",
-}
-
-# The furniture an item can sit on. One fixed list, so the same spot gets the same
-# word every scan and diff_scans does not report a move when only the wording changed.
-ANCHORS = [
-    "desk", "floor", "couch", "chair", "table", "shelf", "dresser", "bed", "cart",
-    "nightstand", "tv stand", "window sill", "stool",
-]
-
-# Variants Gemini might use -> our one standard anchor.
-ANCHOR_ALIASES = {
-    "television": "tv stand", "tv": "tv stand", "tv console": "tv stand",
-    "sofa": "couch", "loveseat": "couch",
-    "armchair": "chair", "desk chair": "chair", "office chair": "chair",
-    "bedside table": "nightstand", "night stand": "nightstand",
-    "end table": "table", "coffee table": "table", "side table": "table",
-    "windowsill": "window sill", "window ledge": "window sill",
-    "bookshelf": "shelf", "bookcase": "shelf",
-    "chest of drawers": "dresser", "wardrobe": "dresser", "cabinet": "dresser",
-    "carpet": "floor", "rug": "floor", "ground": "floor",
-    "computer desk": "desk", "workstation": "desk", "bunk bed": "bed",
-}
+# The vocabulary lives in vocabulary.json so adding an object is a one-line data
+# edit: "labels" are the items we track, "aliases" map other names to one standard
+# label, "anchors" are the furniture words (one fixed list, so the same spot gets the
+# same word every scan and diff_scans does not report a move when only the wording
+# changed) and "anchor_aliases" map other furniture words to a standard anchor.
+_VOCABULARY = json.loads((Path(__file__).parent / "vocabulary.json").read_text(encoding="utf-8"))
+ALLOWLIST = _VOCABULARY["labels"]
+ALIASES = _VOCABULARY["aliases"]
+ANCHORS = _VOCABULARY["anchors"]
+ANCHOR_ALIASES = _VOCABULARY["anchor_aliases"]
 
 # Words that must never appear in a saved description or position (privacy).
 PRIVACY_PATTERN = re.compile(
