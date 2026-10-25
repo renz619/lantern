@@ -16,7 +16,7 @@ PROMPT_FILE = Path(__file__).parent / "prompts" / f"{os.getenv('PROMPT_VERSION',
 CONFIDENCE_CUTOFF = 0.5
 
 ALLOWLIST = [
-    "keys", "wallet", "phone", "airpods", "headphones", "charger", "cable",
+    "keys", "wallet", "phone", "airpods", "earbuds", "headphones", "charger", "cable",
     "glasses", "sunglasses", "water bottle", "remote", "backpack", "bag",
     "laptop", "tablet", "book", "pencil", "pen", "notebook", "watch",
     "mouse", "camera", "umbrella", "hat", "id card", "power bank",
@@ -27,15 +27,15 @@ ALLOWLIST = [
 # Variants Gemini might use -> our one standard name.
 ALIASES = {
     "key": "keys", "key chain": "keys", "keychain": "keys", "car key": "keys",
-    "air pods": "airpods", "airpod": "airpods", "earbuds": "airpods",
-    "earbud": "airpods", "earphones": "airpods", "earbud case": "airpods",
+    "air pods": "airpods", "airpod": "airpods", "earbuds": "earbuds",
+    "earbud": "earbuds", "earphones": "earbuds", "earbud case": "earbuds",
     "bottle": "water bottle", "water-bottle": "water bottle", "flask": "water bottle",
     "cell phone": "phone", "smartphone": "phone", "iphone": "phone",
     "eyeglasses": "glasses", "spectacles": "glasses",
     "phone charger": "charger", "charging cable": "charger", "usb cable": "cable",
     "power adapter": "charger", "laptop charger": "charger",
     "purse": "bag", "handbag": "bag", "tote": "bag", "tote bag": "bag",
-    "mechanical pencil": "pencil", "pen": "pencil", "ballpoint pen": "pen",
+    "mechanical pencil": "pencil", "pen": "pen", "ballpoint pen": "pen",
     "rucksack": "backpack", "pc mouse": "mouse", "computer mouse": "mouse",
     "tv remote": "remote", "remote control": "remote",
     "computer": "laptop", "notebook computer": "laptop",
