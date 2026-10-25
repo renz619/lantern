@@ -3,7 +3,7 @@ from pathlib import Path
 import pytest
 from fastapi.testclient import TestClient
 
-from app.database import connect_database, get_scan
+from app.database import connect_database, create_scan, create_tables, get_scan
 from app.main import app
 
 
@@ -75,7 +75,7 @@ def test_scan_detail_reads_contract_items_from_the_database() -> None:
     assert response.status_code == 200
     body = response.json()
     assert body["status"] == "done"
-    assert body["video_url"] is None
+    assert body["video_url"] == f"/media/scans/{scan_id}/video"
     assert len(body["items"]) == 7
     assert set(body["items"][0]) == {
         "label",
@@ -85,6 +85,66 @@ def test_scan_detail_reads_contract_items_from_the_database() -> None:
         "confidence",
         "video_seconds",
     }
+
+
+def test_uploaded_video_can_be_played_through_its_media_url() -> None:
+    scan_id = upload_video(content=b"video response bytes").json()["scan_id"]
+
+    detail = client.get(f"/scans/{scan_id}").json()
+    response = client.get(detail["video_url"])
+
+    assert response.status_code == 200
+    assert response.headers["content-type"] == "video/mp4"
+    assert response.content == b"video response bytes"
+
+
+def test_video_route_supports_browser_range_requests() -> None:
+    scan_id = upload_video(content=b"video response bytes").json()["scan_id"]
+
+    response = client.get(
+        f"/media/scans/{scan_id}/video",
+        headers={"Range": "bytes=6-13"},
+    )
+
+    assert response.status_code == 206
+    assert response.headers["accept-ranges"] == "bytes"
+    assert response.headers["content-range"] == "bytes 6-13/20"
+    assert response.content == b"response"
+
+
+def test_missing_video_has_no_media_url(isolated_storage) -> None:
+    scan_id = upload_video().json()["scan_id"]
+    saved_video = next(isolated_storage["upload_directory"].iterdir())
+    saved_video.unlink()
+
+    detail = client.get(f"/scans/{scan_id}")
+    media = client.get(f"/media/scans/{scan_id}/video")
+
+    assert detail.status_code == 200
+    assert detail.json()["video_url"] is None
+    assert media.status_code == 404
+    assert media.json() == {"detail": "Video not found"}
+
+
+def test_media_route_refuses_paths_outside_the_upload_directory(
+    isolated_storage,
+    tmp_path,
+) -> None:
+    outside_video = tmp_path / "outside.mp4"
+    outside_video.write_bytes(b"must stay private")
+    connection = connect_database(isolated_storage["database_path"])
+    try:
+        create_tables(connection)
+        scan_id = create_scan(connection, video_path=str(outside_video))
+    finally:
+        connection.close()
+
+    detail = client.get(f"/scans/{scan_id}")
+    media = client.get(f"/media/scans/{scan_id}/video")
+
+    assert detail.json()["video_url"] is None
+    assert media.status_code == 404
+    assert media.json() == {"detail": "Video not found"}
 
 
 def test_analysis_failure_is_stored_without_fake_success(
