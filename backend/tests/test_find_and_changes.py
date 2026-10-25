@@ -87,10 +87,31 @@ def test_find_still_answers_for_an_item_the_latest_scan_missed() -> None:
     assert [i["scan_id"] for i in body["items"]] == [old]
 
 
-def test_find_ignores_failed_scans() -> None:
-    add_scan([item("keys", "silver keys", "desk")], "2026-10-24T18:00:00Z", status="failed")
+@pytest.mark.parametrize("status", ["failed", "processing"])
+def test_find_ignores_unfinished_scans(status) -> None:
+    add_scan([item("keys", "silver keys", "desk")], "2026-10-24T18:00:00Z", status=status)
 
     assert client.get("/find", params={"q": "keys"}).json()["found"] is False
+
+
+def test_history_does_not_attribute_another_same_label_item_to_the_match() -> None:
+    add_scan([item("keys", "gold car key", "dresser")], "2026-10-23T09:00:00Z")
+    add_scan([item("keys", "silver keys", "desk")], "2026-10-24T18:00:00Z")
+
+    body = client.get("/find", params={"q": "keys"}).json()
+
+    assert body["items"][0]["description"] == "silver keys"
+    assert body["past_sightings"] == []
+
+
+def test_history_omits_scans_with_ambiguous_same_label_items() -> None:
+    add_scan([item("keys", "silver keys", "dresser"), item("keys", "gold car key", "bed")],
+             "2026-10-23T09:00:00Z")
+    add_scan([item("keys", "silver keys", "desk")], "2026-10-24T18:00:00Z")
+
+    body = client.get("/find", params={"q": "keys"}).json()
+
+    assert body["past_sightings"] == []
 
 
 def test_find_asks_which_item_when_the_search_matches_different_labels() -> None:

@@ -36,13 +36,22 @@ def _find_item(item: dict) -> dict:
     }
 
 
-def _past_sightings(scans: list[dict], label: str, current_scan_id: int) -> list[dict]:
+def _past_sightings(scans: list[dict], match: dict) -> list[dict]:
+    """Only show unambiguous history with the same label and description.
+
+    Labels alone cannot identify a physical item. Until the team agrees on
+    persistent item IDs, omit uncertain history rather than choosing the first
+    same-label object in an older scan.
+    """
     sightings = []
+    description = match["description"].strip().casefold()
+    if not description:
+        return sightings
     for scan in scans:
-        if scan["id"] == current_scan_id:
+        if scan["id"] == match["scan_id"]:
             continue
-        seen = [item for item in scan["items"] if item["label"] == label]
-        if seen:
+        seen = [item for item in scan["items"] if item["label"] == match["label"]]
+        if len(seen) == 1 and seen[0]["description"].strip().casefold() == description:
             sightings.append(
                 {"scan_id": scan["id"], "seen_at": scan["created_at"], "position": seen[0]["position"]}
             )
@@ -72,7 +81,7 @@ def find_items(connection: sqlite3.Connection, query: str) -> dict:
 
     # One label, possibly several items (two sets of keys): show them all.
     items = [_find_item(match) for match in matches]
-    past = _past_sightings(scans, labels[0], items[0]["scan_id"]) if len(items) == 1 else []
+    past = _past_sightings(scans, items[0]) if len(items) == 1 else []
     return {"found": True, "items": items, "past_sightings": past, "clarify": None}
 
 
