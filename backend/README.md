@@ -88,9 +88,24 @@ export GEMINI_API_KEY="your-key-here"
 ```
 
 `GEMINI_MOCK=1` is rejected when `LANTERN_ANALYZER=gemini`, which prevents a
-real failure from appearing to be a fake success. `GET /find` and `GET /changes`
-still return mock responses. Short ffmpeg-generated clips are not created yet;
-the current media URL plays and seeks within the original uploaded video.
+real failure from appearing to be a fake success. Short ffmpeg-generated clips
+are not created yet; the media URL plays and seeks within the original uploaded
+video.
+
+## Search and changes
+
+`GET /find?q=` and `GET /changes` read the finished scans in SQLite and use member
+A's code in `ai/` (`answer_question` and `diff_scans`, loaded by
+`app/services/ai_tools.py`).
+
+- `/find` looks at the newest scan that contained each label, so an item the latest
+  scan missed is still found where it was last seen. Items sharing a label (two
+  sets of keys) are all returned in `items`. A search that matches different labels
+  returns `clarify` with the label names as options. `past_sightings` lists earlier
+  scans for a single match. `clip_url` is the scan's media URL and
+  `clip_start_seconds` is the item's `video_seconds`.
+- `/changes` compares the two newest finished scans (failed scans are skipped).
+  With fewer than two it returns empty lists and `null` scan ids.
 
 ## SQLite storage checkpoint
 
@@ -135,4 +150,4 @@ From `backend/`, with the virtual environment active:
 python -m pytest -q
 ```
 
-A successful run currently ends with `30 passed`.
+A successful run currently ends with `40 passed`.

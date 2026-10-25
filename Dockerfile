@@ -14,6 +14,8 @@ WORKDIR /app
 COPY backend/requirements.txt backend/requirements.txt
 RUN pip install --no-cache-dir -r backend/requirements.txt
 COPY backend/ backend/
+# Member A's Gemini, search and diff code; the backend imports it from here.
+COPY ai/ ai/
 # main.py looks for frontend/dist next to backend/
 COPY --from=frontend /frontend/dist frontend/dist
 

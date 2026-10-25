@@ -210,3 +210,11 @@ def list_scans(connection: sqlite3.Connection) -> list[dict]:
         }
         for row in rows
     ]
+
+
+def list_done_scans(connection: sqlite3.Connection) -> list[dict]:
+    """Every finished scan with its items, newest first. Failed scans are skipped."""
+    ids = connection.execute(
+        "SELECT id FROM scans WHERE status = 'done' ORDER BY created_at DESC, id DESC"
+    ).fetchall()
+    return [get_scan(connection, row["id"]) for row in ids]
