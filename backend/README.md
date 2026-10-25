@@ -54,20 +54,38 @@ Successful output:
 FastAPI's interactive API documentation is available at
 <http://127.0.0.1:8000/docs> while the server is running.
 
-## Mock API checkpoint
+## Scan upload and processing
 
-The current endpoints return predictable fake data so the frontend and backend
-can be tested together before the database and Gemini integration exist:
+The scan endpoints now use real local storage:
 
-- `POST /scans` accepts a multipart field named `video` and returns scan ID `99`.
-- `GET /scans` returns the mock scan history, newest first.
-- `GET /scans/{id}` returns scan status and items. Scan `99` changes from
-  `processing` to `done` on its third status check.
-- `GET /find?q=keys` returns every matching item, including duplicate labels.
-- `GET /changes` returns mock moved, missing, and new items.
+- `POST /scans` accepts a multipart field named `video`, saves it under a random
+  server-generated filename, creates a SQLite scan, and starts analysis.
+- `GET /scans` reads scan history from SQLite, newest first.
+- `GET /scans/{id}` reads status and saved sightings from SQLite.
 
-The mock upload is not written to disk and is not sent to Gemini. Those behaviors
-belong to later checkpoints.
+Supported uploads are `.mp4`, `.mov`, `.webm`, and `.mkv`, up to 250 MB by
+default. Configure storage and the size limit with:
+
+```bash
+export LANTERN_UPLOAD_DIR="/path/to/uploads"
+export LANTERN_MAX_UPLOAD_BYTES=262144000
+```
+
+FastAPI runs analysis as a background task after accepting the upload. Select
+the analyzer explicitly:
+
+```bash
+# Safe local default: deterministic fake items, no Gemini request
+export LANTERN_ANALYZER=mock
+
+# Real analysis: exceptions mark the scan failed and never fall back to fake data
+export LANTERN_ANALYZER=gemini
+export GEMINI_API_KEY="your-key-here"
+```
+
+`GEMINI_MOCK=1` is rejected when `LANTERN_ANALYZER=gemini`, which prevents a
+real failure from appearing to be a fake success. `GET /find` and `GET /changes`
+still return mock responses; real search, changes, and media URLs come later.
 
 ## SQLite storage checkpoint
 
@@ -86,8 +104,7 @@ export LANTERN_DB_PATH="/path/to/another.sqlite"
 ```
 
 Database files are ignored by Git. Tests use temporary databases and never touch
-the default file. The API routes still use mock data in this checkpoint; later
-work will connect these tested database operations to uploads and analysis.
+the default file.
 
 ## Frontend access (CORS)
 
@@ -113,4 +130,4 @@ From `backend/`, with the virtual environment active:
 python -m pytest -q
 ```
 
-A successful run currently ends with `16 passed`.
+A successful run currently ends with `24 passed`.
