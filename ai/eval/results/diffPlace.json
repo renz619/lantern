@@ -1,0 +1,90 @@
+[
+  {
+    "label": "keys",
+    "description": "metal key on a reddish-brown strap tag",
+    "anchor": "window sill",
+    "position": "on the window sill under the left blinds",
+    "confidence": 0.88,
+    "video_seconds": 0.5
+  },
+  {
+    "label": "keys",
+    "description": "brass key attached to a dark blue lanyard tag",
+    "anchor": "table",
+    "position": "on the round white table",
+    "confidence": 0.95,
+    "video_seconds": 4.0
+  },
+  {
+    "label": "water bottle",
+    "description": "black insulated water bottle with handle cap",
+    "anchor": "table",
+    "position": "in the center of the round white table",
+    "confidence": 0.95,
+    "video_seconds": 4.5
+  },
+  {
+    "label": "water bottle",
+    "description": "tall dark bottle with grey lid",
+    "anchor": "dresser",
+    "position": "on top of the wooden dresser to the right of the mirror",
+    "confidence": 0.9,
+    "video_seconds": 10.0
+  },
+  {
+    "label": "backpack",
+    "description": "backpack",
+    "anchor": "shelf",
+    "position": "resting on the wooden built-in shelf in the alcove",
+    "confidence": 0.95,
+    "video_seconds": 12.5
+  },
+  {
+    "label": "water bottle",
+    "description": "black water bottle",
+    "anchor": "shelf",
+    "position": "standing on the wooden built-in shelf next to the backpack",
+    "confidence": 0.92,
+    "video_seconds": 13.0
+  },
+  {
+    "label": "phone",
+    "description": "smartphone with illuminated blue screen",
+    "anchor": "couch",
+    "position": "on the blue cushion of the booth couch",
+    "confidence": 0.95,
+    "video_seconds": 18.5
+  },
+  {
+    "label": "wallet",
+    "description": "dark wallet holding cards with a white card adjacent",
+    "anchor": "table",
+    "position": "on the round white table",
+    "confidence": 0.93,
+    "video_seconds": 19.5
+  },
+  {
+    "label": "pencil",
+    "description": "black and red writing utensil",
+    "anchor": "table",
+    "position": "near the edge of the round white table",
+    "confidence": 0.89,
+    "video_seconds": 20.0
+  },
+  {
+    "label": "bag",
+    "description": "blue tote bag with white lettering",
+    "anchor": "couch",
+    "position": "in the corner of the couch",
+    "confidence": 0.94,
+    "video_seconds": 21.0
+  },
+  {
+    "label": "airpods",
+    "description": "white earbud charging case",
+    "anchor": "couch",
+    "position": "on the blue seat cushion of the couch",
+    "confidence": 0.95,
+    "video_seconds": 24.0
+  }
+]

@@ -26,7 +26,7 @@
             "label": "debit card",
             "description": "red debit card",
             "anchor": "dresser",
-            "position": "on top of the wooden dresser to the right of the mirror",
+            "position": "on top of the wooden dresser to the right of the mirror, not inside a wallet, loose",
             "video_seconds": 9.5
         },
         {
@@ -68,7 +68,7 @@
             "label": "id card",
             "description": "white plastic ID card",
             "anchor": "table",
-            "position": "on the round white table next to the wallet",
+            "position": "on the round white table next to the wallet, is loose not in the wallet",
             "video_seconds": 20.0
         },
         {

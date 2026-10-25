@@ -1,0 +1,74 @@
+[
+  {
+    "label": "water bottle",
+    "description": "black water bottle with loop cap",
+    "anchor": "table",
+    "position": "on the round white table near the window",
+    "confidence": 0.95,
+    "video_seconds": 5.0
+  },
+  {
+    "label": "keys",
+    "description": "metal keys on a blue strap lanyard",
+    "anchor": "table",
+    "position": "on the round white table next to the water bottle",
+    "confidence": 0.95,
+    "video_seconds": 5.0
+  },
+  {
+    "label": "keys",
+    "description": "keys attached to a blue strap lanyard",
+    "anchor": "dresser",
+    "position": "on the top left corner of the wooden dresser",
+    "confidence": 0.95,
+    "video_seconds": 9.5
+  },
+  {
+    "label": "water bottle",
+    "description": "tall black water bottle with loop cap",
+    "anchor": "dresser",
+    "position": "on the top right corner of the wooden dresser",
+    "confidence": 0.95,
+    "video_seconds": 10.0
+  },
+  {
+    "label": "phone",
+    "description": "black smartphone lying flat",
+    "anchor": "shelf",
+    "position": "on the lower shelf ledge of the wooden built-in cabinet",
+    "confidence": 0.95,
+    "video_seconds": 13.0
+  },
+  {
+    "label": "pencil",
+    "description": "black pen or mechanical pencil with a clip",
+    "anchor": "table",
+    "position": "on the round white table near the couch",
+    "confidence": 0.9,
+    "video_seconds": 18.0
+  },
+  {
+    "label": "wallet",
+    "description": "small red card holder sleeve",
+    "anchor": "table",
+    "position": "on the round white table beside the green badge",
+    "confidence": 0.85,
+    "video_seconds": 18.0
+  },
+  {
+    "label": "airpods",
+    "description": "white airpods charging case",
+    "anchor": "couch",
+    "position": "on the blue seat cushion of the patterned modular couch",
+    "confidence": 0.95,
+    "video_seconds": 20.0
+  },
+  {
+    "label": "bag",
+    "description": "navy blue Annapurna Labs tote bag",
+    "anchor": "couch",
+    "position": "on the blue seat cushion of the patterned couch below the bulletin board",
+    "confidence": 0.95,
+    "video_seconds": 22.0
+  }
+]

@@ -5,11 +5,13 @@ Usage (from the repo root):
     python ai/eval/run_eval.py testdata            # every sheet in the folder
     python ai/eval/run_eval.py testdata --cache    # reuse saved Gemini answers
 
+--only=a,b restricts a folder run to the sheets named a.json and b.json.
 --cache reuses the last Gemini answer for each video instead of calling Gemini again
 (videos with no saved answer are skipped). Free-tier Gemini allows about 20 requests
 a day, so use --cache while tuning how answers are scored.
 """
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -18,7 +20,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from analyze import analyze_video, normalize_label  # noqa: E402
 
 TIME_TOLERANCE = 3.0
-CACHE_DIR = Path(__file__).parent / "results"
+# With PROMPT_VERSION set, answers are saved per version (results/analyze_v5/...)
+# so runs of different prompts can be compared without overwriting each other.
+CACHE_DIR = Path(__file__).parent / "results" / os.getenv("PROMPT_VERSION", "")
 
 
 def match_items(found, truth, tolerance=TIME_TOLERANCE):
@@ -48,7 +52,7 @@ def describe(item):
 
 def get_found(video, use_cache):
     """Return Gemini's items for a video, or None if --cache was asked for and nothing is saved."""
-    CACHE_DIR.mkdir(exist_ok=True)
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
     cache_file = CACHE_DIR / f"{Path(video).stem}.json"
     if use_cache:
         if not cache_file.exists():
@@ -78,9 +82,14 @@ def report(name, result):
         print("  FALSE ALARM", describe(item))
 
 
-def find_pairs(folder):
-    """Yield (video, sheet) for every sheet in folder whose video file exists."""
+def find_pairs(folder, only=None):
+    """Yield (video, sheet) for every sheet in folder whose video file exists.
+
+    only: optional set of sheet names (without .json) to restrict the run to.
+    """
     for sheet in sorted(Path(folder).glob("*.json")):
+        if only and sheet.stem not in only:
+            continue
         data = json.loads(sheet.read_text(encoding="utf-8"))
         video = Path(folder) / data["video"]
         if video.exists():
@@ -89,9 +98,9 @@ def find_pairs(folder):
             print(f"skipping {sheet.name}: video {data['video']} not found")
 
 
-def run_all(folder, use_cache):
+def run_all(folder, use_cache, only=None):
     found = missed = false_alarms = skipped = 0
-    for video, sheet in find_pairs(folder):
+    for video, sheet in find_pairs(folder, only):
         try:
             result = score_video(video, sheet, use_cache)
         except Exception as error:  # one bad video shouldn't stop the batch
@@ -114,8 +123,9 @@ def run_all(folder, use_cache):
 if __name__ == "__main__":
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     cache = "--cache" in sys.argv
+    only = {n for a in sys.argv[1:] if a.startswith("--only=") for n in a[7:].split(",") if n}
     if len(args) == 1 and Path(args[0]).is_dir():
-        run_all(args[0], cache)
+        run_all(args[0], cache, only or None)
     else:
         result = score_video(args[0], args[1], cache)
         report(Path(args[0]).stem, result) if result else print("no saved answer (run without --cache)")

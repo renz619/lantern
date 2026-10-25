@@ -1,0 +1,146 @@
+[
+  {
+    "label": "tablet",
+    "description": "black drawing tablet",
+    "anchor": "desk",
+    "position": "on the desk surface under the loft bed",
+    "confidence": 0.85,
+    "video_seconds": 9.0
+  },
+  {
+    "label": "water bottle",
+    "description": "tall black insulated water bottle",
+    "anchor": "desk",
+    "position": "on the desk under the loft bed",
+    "confidence": 0.95,
+    "video_seconds": 10.0
+  },
+  {
+    "label": "bag",
+    "description": "red gift bag with white lettering",
+    "anchor": "desk",
+    "position": "on the desk under the loft bed next to the water bottle",
+    "confidence": 0.95,
+    "video_seconds": 10.0
+  },
+  {
+    "label": "hat",
+    "description": "olive green baseball cap",
+    "anchor": "tv stand",
+    "position": "hanging on the upper-left corner of the TV",
+    "confidence": 0.95,
+    "video_seconds": 16.0
+  },
+  {
+    "label": "laptop",
+    "description": "closed silver laptop",
+    "anchor": "floor",
+    "position": "on the grey shag rug in front of the TV stand",
+    "confidence": 0.95,
+    "video_seconds": 16.5
+  },
+  {
+    "label": "backpack",
+    "description": "black backpack",
+    "anchor": "floor",
+    "position": "leaning against the right side of the white TV stand",
+    "confidence": 0.9,
+    "video_seconds": 18.0
+  },
+  {
+    "label": "remote",
+    "description": "black streaming remote with purple directional pad",
+    "anchor": "couch",
+    "position": "on the seat cushion of the grey couch",
+    "confidence": 0.95,
+    "video_seconds": 21.0
+  },
+  {
+    "label": "remote",
+    "description": "black TV remote control",
+    "anchor": "couch",
+    "position": "on the seat cushion of the grey couch beside the streaming remote",
+    "confidence": 0.95,
+    "video_seconds": 21.0
+  },
+  {
+    "label": "water bottle",
+    "description": "orange water bottle with black cap",
+    "anchor": "couch",
+    "position": "on the corner of the couch cushion",
+    "confidence": 0.95,
+    "video_seconds": 21.5
+  },
+  {
+    "label": "charger",
+    "description": "black laptop power brick charger with power cable",
+    "anchor": "couch",
+    "position": "on the grey couch cushion",
+    "confidence": 0.9,
+    "video_seconds": 22.0
+  },
+  {
+    "label": "laptop",
+    "description": "grey laptop with stickers propped open",
+    "anchor": "couch",
+    "position": "resting open on the couch cushions",
+    "confidence": 0.9,
+    "video_seconds": 22.0
+  },
+  {
+    "label": "bag",
+    "description": "cream and navy canvas duffel bag",
+    "anchor": "stool",
+    "position": "on top of the black stool behind the couch",
+    "confidence": 0.9,
+    "video_seconds": 23.5
+  },
+  {
+    "label": "bag",
+    "description": "cream canvas tote bag with blue handles",
+    "anchor": "floor",
+    "position": "on the floor next to the black stool",
+    "confidence": 0.85,
+    "video_seconds": 24.0
+  },
+  {
+    "label": "umbrella",
+    "description": "compact black folded umbrella",
+    "anchor": "chair",
+    "position": "on the seat of the wooden chair",
+    "confidence": 0.95,
+    "video_seconds": 27.0
+  },
+  {
+    "label": "mouse",
+    "description": "white wireless computer mouse",
+    "anchor": "chair",
+    "position": "on the seat of the wooden chair next to the umbrella",
+    "confidence": 0.9,
+    "video_seconds": 27.0
+  },
+  {
+    "label": "bag",
+    "description": "blue reusable shopping bag",
+    "anchor": "chair",
+    "position": "resting against the leg of the wooden chair",
+    "confidence": 0.85,
+    "video_seconds": 27.5
+  },
+  {
+    "label": "notebook",
+    "description": "yellow folder or notebook",
+    "anchor": "desk",
+    "position": "on the desk under the second loft bed",
+    "confidence": 0.8,
+    "video_seconds": 28.0
+  },
+  {
+    "label": "bag",
+    "description": "red gift bag with white lettering",
+    "anchor": "desk",
+    "position": "on the second desk under the loft bed",
+    "confidence": 0.95,
+    "video_seconds": 30.0
+  }
+]

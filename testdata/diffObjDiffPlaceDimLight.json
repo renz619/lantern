@@ -69,7 +69,7 @@
             "description": "black power strip with power cord",
             "anchor": "couch",
             "position": "resting on the couch cushion next to the remotes",
-            "video_seconds": 23.5
+            "video_seconds": 23.0
         },
         {
             "label": "laptop",
@@ -86,18 +86,32 @@
             "video_seconds": 24
         },
         {
+            "label": "bag",
+            "description": "creme colored duffel bag with blue handles",
+            "anchor": "floor",
+            "position": "sitting on the floor near the black cushion stool",
+            "video_seconds": 25
+        },
+        {
             "label": "umbrella",
             "description": "black compact umbrella with brown wooden handle",
             "anchor": "chair",
-            "position": "sitting on the wooden chair",
-            "video_seconds": 29
+            "position": "sitting on the wooden chair next to the mouse",
+            "video_seconds": 28
         },
         {
             "label": "mouse",
             "description": "white mouse",
             "anchor": "chair",
-            "position": "sitting on the wooden chair",
-            "video_seconds": 29
+            "position": "sitting on the wooden chair next to the umbrella",
+            "video_seconds": 28
+        },
+        {
+            "label": "bag",
+            "description": "blue resuable bag",
+            "anchor": "floor",
+            "position": "sitting on the floor in between the wooden chair and desk under the bed loft",
+            "video_seconds": 28
         },
         {
             "label": "notebook",
@@ -107,11 +121,11 @@
             "video_seconds": 30.0
         },
         {
-            "label": "pen",
-            "description": "black pen",
+            "label": "bag",
+            "description": "red paper gift bag with Snag print",
             "anchor": "desk",
-            "position": "on yellow notebook on top of desk under the bunk bed",
-            "video_seconds": 30.0
+            "position": "on the desk under the second loft bed",
+            "video_seconds": 32.5
         }
     ]
 }
