@@ -2,6 +2,13 @@
     "video": "sameObjDimLight.MOV",
     "items": [
         {
+            "label": "laptop",
+            "description": "black laptop",
+            "anchor": "desk",
+            "position": "on the desk under the loft bed behind the keyboard",
+            "video_seconds": 7.0
+        },
+        {
             "label": "bag",
             "description": "red paper gift bag with 'Snag' printed on it",
             "anchor": "desk",
@@ -9,7 +16,7 @@
             "video_seconds": 8.0
         },
         {
-            "label": "key",
+            "label": "keys",
             "description": "multicolored keys with a UT orange decoration and a car key sticking out to the left",
             "anchor": "desk",
             "position": "on the desk, in front of the keyboard",
@@ -17,8 +24,8 @@
         },
         {
             "label": "water bottle",
-            "description": "black Owala water bottle",
-            "anchor": "table",
+            "description": "black water bottle",
+            "anchor": "cart",
             "position": "on the small black utility cart on the floor next to the white tv stand",
             "video_seconds": 10.0
         },
@@ -32,30 +39,44 @@
         {
             "label": "glasses",
             "description": "gray framed glasses",
-            "anchor": "table",
-            "position": "on top of the white tv stand on the floor",
+            "anchor": "tv stand",
+            "position": "on top of the white tv stand next to the keys with the blue key chain",
             "video_seconds": 13.0
         },
         {
-            "label": "key",
-            "description": "key with black key chain",
-            "anchor": "table",
-            "position": "on top of the white tv stand on the floor",
+            "label": "keys",
+            "description": "key with blue key chain",
+            "anchor": "tv stand",
+            "position": "on top of the white tv stand next to the glasses",
             "video_seconds": 14.0
         },
         {
+            "label": "water bottle",
+            "description": "black water bottle",
+            "anchor": "dresser",
+            "position": "on top of the dresser in the alcove",
+            "video_seconds": 15.0
+        },
+        {
             "label": "wallet",
-            "description": "white bank of america wallet",
+            "description": "white bank of america wallet holding cards",
             "anchor": "couch",
-            "position": "on top of the grey couch",
-            "video_seconds": 16.0
+            "position": "on top of the grey couch near the edge",
+            "video_seconds": 15.0
         },
         {
             "label": "bag",
-            "description": "blue toat bag",
-            "anchor": "floor",
+            "description": "blue tote bag",
+            "anchor": "stool",
             "position": "on grey cushioned stool on the floor",
             "video_seconds": 17.0
+        },
+        {
+            "label": "bag",
+            "description": "cream colored bag with blue handles",
+            "anchor": "floor",
+            "position": "on the floor between the wooden chair and the storage bin behind the couch",
+            "video_seconds": 21.0
         },
         {
             "label": "water bottle",

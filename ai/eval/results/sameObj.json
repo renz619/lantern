@@ -1,0 +1,82 @@
+[
+  {
+    "label": "tablet",
+    "description": "black tablet plugged into a white charging cable",
+    "anchor": "desk",
+    "position": "on the front edge of the wooden desk",
+    "confidence": 0.95,
+    "video_seconds": 7.0
+  },
+  {
+    "label": "laptop",
+    "description": "black laptop",
+    "anchor": "desk",
+    "position": "on the desk under the loft bed behind the fan",
+    "confidence": 0.95,
+    "video_seconds": 7.0
+  },
+  {
+    "label": "airpods",
+    "description": "small white earbud charging case",
+    "anchor": "desk",
+    "position": "on the desk to the right of the laptop",
+    "confidence": 0.8,
+    "video_seconds": 7.5
+  },
+  {
+    "label": "keys",
+    "description": "keys on a metal ring with attached fobs",
+    "anchor": "desk",
+    "position": "on the wooden desk next to the chair",
+    "confidence": 0.9,
+    "video_seconds": 8.0
+  },
+  {
+    "label": "bag",
+    "description": "red paper gift bag with 'Snag Snag Snag' lettering",
+    "anchor": "desk",
+    "position": "on the right side of the desk under the loft bed",
+    "confidence": 0.95,
+    "video_seconds": 8.0
+  },
+  {
+    "label": "backpack",
+    "description": "backpack",
+    "anchor": "floor",
+    "position": "on the gray rug in front of the white TV stand",
+    "confidence": 0.98,
+    "video_seconds": 12.0
+  },
+  {
+    "label": "glasses",
+    "description": "pair of eyeglasses",
+    "anchor": "tv stand",
+    "position": "on top of the white TV stand beneath the right side of the TV screen",
+    "confidence": 0.88,
+    "video_seconds": 13.0
+  },
+  {
+    "label": "phone",
+    "description": "black smartphone",
+    "anchor": "couch",
+    "position": "on the front cushion of the gray sofa",
+    "confidence": 0.95,
+    "video_seconds": 15.0
+  },
+  {
+    "label": "id card",
+    "description": "white card with red stripe",
+    "anchor": "couch",
+    "position": "on the seat cushion of the gray sofa",
+    "confidence": 0.9,
+    "video_seconds": 15.5
+  },
+  {
+    "label": "water bottle",
+    "description": "tall black cylindrical water bottle",
+    "anchor": "chair",
+    "position": "standing upright on the seat of the wooden desk chair",
+    "confidence": 0.95,
+    "video_seconds": 20.0
+  }
+]
